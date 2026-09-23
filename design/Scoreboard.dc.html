@@ -1,0 +1,342 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&amp;family=Barlow:wght@400;600&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap">
+  <style>
+    body { margin: 0; background: #14100b; }
+    a { color: #f59e0b; }
+    a:hover { color: #fbbf24; }
+  </style>
+</helmet>
+<div style="position: relative; width: 1440px; height: 1340px; overflow: hidden; background: #14100b; color: #f2e7cf; font-family: 'Barlow', 'Segoe UI', sans-serif;">
+
+  <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 14px 44px; background: #1d1712; border-bottom: 1px solid rgba(245, 158, 11, 0.25);">
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <svg width="34" height="34" viewBox="0 0 64 64"><circle cx="32" cy="32" r="27" fill="none" stroke="#d97706" stroke-width="2.5" stroke-dasharray="2 7" stroke-linecap="round" opacity="0.7"></circle><g transform="rotate(45 32 32)"><rect x="19" y="19" width="26" height="26" rx="6" fill="#f59e0b"></rect><g fill="#241500"><circle cx="26" cy="26" r="2.4"></circle><circle cx="38" cy="26" r="2.4"></circle><circle cx="32" cy="32" r="2.4"></circle><circle cx="26" cy="38" r="2.4"></circle><circle cx="38" cy="38" r="2.4"></circle></g></g></svg>
+      <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 800; font-size: 23px; letter-spacing: 3px; text-transform: uppercase;">Game Night Compass</div>
+    </div>
+    <div style="display: flex; align-items: center; gap: 18px;">
+      <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 11px; color: rgba(242, 231, 207, 0.45);">96 GAMES · 78 PLAY AT 4</div>
+      <div style="display: flex; align-items: center; gap: 9px; background: #f59e0b; color: #241500; padding: 10px 20px; border-radius: 6px; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 16px; letter-spacing: 1.5px; text-transform: uppercase; box-shadow: 0 2px 14px rgba(245, 158, 11, 0.35);">
+        <svg width="16" height="16" viewBox="0 0 24 24"><rect x="2.5" y="2.5" width="19" height="19" rx="4.5" fill="none" stroke="currentColor" stroke-width="2.2"></rect><circle cx="8" cy="8" r="1.8" fill="currentColor"></circle><circle cx="16" cy="8" r="1.8" fill="currentColor"></circle><circle cx="12" cy="12" r="1.8" fill="currentColor"></circle><circle cx="8" cy="16" r="1.8" fill="currentColor"></circle><circle cx="16" cy="16" r="1.8" fill="currentColor"></circle></svg>
+        <span>Roll the dice</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 30px; padding: 24px 44px 16px; flex-wrap: wrap;">
+    <div style="display: flex; flex-direction: column; gap: 4px;">
+      <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 800; font-size: 40px; line-height: 1; letter-spacing: 1px; text-transform: uppercase;">Which game tonight?</div>
+      <div style="font-size: 14px; color: rgba(242, 231, 207, 0.55); line-height: 1.5;">The whole shelf, tiered by how each game actually plays at every player count.</div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 7px;">
+      <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 10px; letter-spacing: 2px; color: rgba(242, 231, 207, 0.4);">PLAYERS AT THE TABLE</div>
+      <div style="display: flex; border: 1px solid rgba(242, 231, 207, 0.18); border-radius: 8px; overflow: hidden;">
+        <div style="display: flex; align-items: center; justify-content: center; min-width: 52px; height: 42px; font-family: 'JetBrains Mono', Consolas, monospace; font-size: 12px; color: rgba(242, 231, 207, 0.5); border-right: 1px solid rgba(242, 231, 207, 0.12);">Any</div>
+        <div style="display: flex; align-items: center; justify-content: center; min-width: 42px; height: 42px; font-family: 'JetBrains Mono', Consolas, monospace; font-size: 12px; color: rgba(242, 231, 207, 0.5); border-right: 1px solid rgba(242, 231, 207, 0.12);">1</div>
+        <div style="display: flex; align-items: center; justify-content: center; min-width: 42px; height: 42px; font-family: 'JetBrains Mono', Consolas, monospace; font-size: 12px; color: rgba(242, 231, 207, 0.5); border-right: 1px solid rgba(242, 231, 207, 0.12);">2</div>
+        <div style="display: flex; align-items: center; justify-content: center; min-width: 42px; height: 42px; font-family: 'JetBrains Mono', Consolas, monospace; font-size: 12px; color: rgba(242, 231, 207, 0.5); border-right: 1px solid rgba(242, 231, 207, 0.12);">3</div>
+        <div style="display: flex; align-items: center; justify-content: center; min-width: 42px; height: 42px; font-family: 'JetBrains Mono', Consolas, monospace; font-size: 14px; font-weight: 700; color: #241500; background: #f59e0b; border-right: 1px solid rgba(242, 231, 207, 0.12);">4</div>
+        <div style="display: flex; align-items: center; justify-content: center; min-width: 42px; height: 42px; font-family: 'JetBrains Mono', Consolas, monospace; font-size: 12px; color: rgba(242, 231, 207, 0.5); border-right: 1px solid rgba(242, 231, 207, 0.12);">5</div>
+        <div style="display: flex; align-items: center; justify-content: center; min-width: 42px; height: 42px; font-family: 'JetBrains Mono', Consolas, monospace; font-size: 12px; color: rgba(242, 231, 207, 0.5); border-right: 1px solid rgba(242, 231, 207, 0.12);">6</div>
+        <div style="display: flex; align-items: center; justify-content: center; min-width: 42px; height: 42px; font-family: 'JetBrains Mono', Consolas, monospace; font-size: 12px; color: rgba(242, 231, 207, 0.5); border-right: 1px solid rgba(242, 231, 207, 0.12);">7</div>
+        <div style="display: flex; align-items: center; justify-content: center; min-width: 42px; height: 42px; font-family: 'JetBrains Mono', Consolas, monospace; font-size: 12px; color: rgba(242, 231, 207, 0.5); border-right: 1px solid rgba(242, 231, 207, 0.12);">8</div>
+        <div style="display: flex; align-items: center; justify-content: center; min-width: 42px; height: 42px; font-family: 'JetBrains Mono', Consolas, monospace; font-size: 12px; color: rgba(242, 231, 207, 0.5); border-right: 1px solid rgba(242, 231, 207, 0.12);">9</div>
+        <div style="display: flex; align-items: center; justify-content: center; min-width: 42px; height: 42px; font-family: 'JetBrains Mono', Consolas, monospace; font-size: 12px; color: rgba(242, 231, 207, 0.5); border-right: 1px solid rgba(242, 231, 207, 0.12);">10</div>
+        <div style="display: flex; align-items: center; justify-content: center; min-width: 42px; height: 42px; font-family: 'JetBrains Mono', Consolas, monospace; font-size: 12px; color: rgba(242, 231, 207, 0.5);">12</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: center; gap: 10px; padding: 0 44px 14px; flex-wrap: wrap;">
+    <div style="display: flex; align-items: center; gap: 8px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(242, 231, 207, 0.14); border-radius: 6px; padding: 9px 14px; width: 230px; color: rgba(242, 231, 207, 0.4);">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"></circle><line x1="15.5" y1="15.5" x2="20.5" y2="20.5"></line></svg>
+      <span style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 11px;">search the shelf…</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap; font-family: 'JetBrains Mono', Consolas, monospace; font-size: 11px;">
+      <span style="border: 1px solid rgba(242, 231, 207, 0.16); border-radius: 20px; padding: 7px 13px; color: rgba(242, 231, 207, 0.5);">strategy</span>
+      <span style="border: 1px solid rgba(242, 231, 207, 0.16); border-radius: 20px; padding: 7px 13px; color: rgba(242, 231, 207, 0.5);">party</span>
+      <span style="border: 1px solid rgba(242, 231, 207, 0.16); border-radius: 20px; padding: 7px 13px; color: rgba(242, 231, 207, 0.5);">cooperative</span>
+      <span style="border: 1px solid rgba(242, 231, 207, 0.16); border-radius: 20px; padding: 7px 13px; color: rgba(242, 231, 207, 0.5);">duel</span>
+      <span style="border: 1px solid rgba(242, 231, 207, 0.16); border-radius: 20px; padding: 7px 13px; color: rgba(242, 231, 207, 0.5);">filler</span>
+      <span style="border: 1px solid rgba(242, 231, 207, 0.16); border-radius: 20px; padding: 7px 13px; color: rgba(242, 231, 207, 0.5);">chill</span>
+      <span style="color: rgba(242, 231, 207, 0.35); padding: 7px 4px;">+10</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 7px; border: 1px dashed rgba(242, 231, 207, 0.2); border-radius: 6px; padding: 8px 13px; font-family: 'JetBrains Mono', Consolas, monospace; font-size: 11px; color: rgba(242, 231, 207, 0.5); margin-left: auto;">
+      <span style="color: rgba(242, 231, 207, 0.35);">teach gate</span>
+      <span style="display: inline-flex; gap: 2px;"><span style="display: inline-block; width: 9px; height: 12px; border-radius: 2px; background: rgba(53, 211, 119, 0.35);"></span><span style="display: inline-block; width: 9px; height: 12px; border-radius: 2px; background: rgba(168, 207, 58, 0.35);"></span><span style="display: inline-block; width: 9px; height: 12px; border-radius: 2px; background: rgba(236, 194, 60, 0.4);"></span><span style="display: inline-block; width: 9px; height: 12px; border-radius: 2px; background: rgba(245, 141, 62, 0.42);"></span><span style="display: inline-block; width: 9px; height: 12px; border-radius: 2px; background: rgba(239, 95, 74, 0.45);"></span><span style="display: inline-block; width: 9px; height: 12px; border-radius: 2px; background: rgba(232, 58, 46, 0.5);"></span></span>
+      <span style="color: #f2e7cf; font-weight: 700;">≤ very heavy</span>
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: center; gap: 14px; padding: 9px 44px; border-top: 1px solid rgba(242, 231, 207, 0.07); border-bottom: 1px solid rgba(242, 231, 207, 0.07); background: #171209;">
+    <span style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 9px; letter-spacing: 2px; color: rgba(242, 231, 207, 0.35);">TEACH TIME · ROW TINT</span>
+    <div style="display: flex; align-items: center; gap: 4px;"><span style="display: inline-block; width: 26px; height: 14px; border-radius: 3px; background-color: #14100b; background-image: linear-gradient(0deg, rgba(53, 211, 119, 0.07), rgba(53, 211, 119, 0.07)); border: 1px solid rgba(242, 231, 207, 0.12);"></span><span style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 10px; color: rgba(242, 231, 207, 0.55);">instant</span></div>
+    <div style="display: flex; align-items: center; gap: 4px;"><span style="display: inline-block; width: 26px; height: 14px; border-radius: 3px; background-color: #14100b; background-image: linear-gradient(0deg, rgba(168, 207, 58, 0.07), rgba(168, 207, 58, 0.07)); border: 1px solid rgba(242, 231, 207, 0.12);"></span><span style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 10px; color: rgba(242, 231, 207, 0.55);">~10 min</span></div>
+    <div style="display: flex; align-items: center; gap: 4px;"><span style="display: inline-block; width: 26px; height: 14px; border-radius: 3px; background-color: #14100b; background-image: linear-gradient(0deg, rgba(236, 194, 60, 0.08), rgba(236, 194, 60, 0.08)); border: 1px solid rgba(242, 231, 207, 0.12);"></span><span style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 10px; color: rgba(242, 231, 207, 0.55);">~30 min</span></div>
+    <div style="display: flex; align-items: center; gap: 4px;"><span style="display: inline-block; width: 26px; height: 14px; border-radius: 3px; background-color: #14100b; background-image: linear-gradient(0deg, rgba(245, 141, 62, 0.1), rgba(245, 141, 62, 0.1)); border: 1px solid rgba(242, 231, 207, 0.12);"></span><span style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 10px; color: rgba(242, 231, 207, 0.55);">experienced</span></div>
+    <div style="display: flex; align-items: center; gap: 4px;"><span style="display: inline-block; width: 26px; height: 14px; border-radius: 3px; background-color: #14100b; background-image: linear-gradient(0deg, rgba(239, 95, 74, 0.12), rgba(239, 95, 74, 0.12)); border: 1px solid rgba(242, 231, 207, 0.12);"></span><span style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 10px; color: rgba(242, 231, 207, 0.55);">heavy rulebook</span></div>
+    <div style="display: flex; align-items: center; gap: 4px;"><span style="display: inline-block; width: 26px; height: 14px; border-radius: 3px; background-color: #14100b; background-image: linear-gradient(0deg, rgba(232, 58, 46, 0.16), rgba(232, 58, 46, 0.16)); border: 1px solid rgba(242, 231, 207, 0.12);"></span><span style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 10px; color: rgba(242, 231, 207, 0.55);">very heavy</span></div>
+    <span style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 9px; color: rgba(242, 231, 207, 0.25); margin-left: auto;">tap a row for table notes</span>
+  </div>
+
+  <div style="display: flex; gap: 22px; padding: 22px 44px 0;">
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; width: 92px; flex-shrink: 0; padding-top: 34px;">
+      <svg width="60" height="60" viewBox="0 0 64 64"><circle cx="32" cy="32" r="29" fill="#35d377"></circle><text x="32" y="34" text-anchor="middle" dominant-baseline="central" font-family="'Barlow Condensed','Arial Narrow',sans-serif" font-weight="800" font-size="30" fill="#14100b">S</text></svg>
+      <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 2px; color: #35d377; text-transform: uppercase; text-align: center; line-height: 1.3;">Great<br>at 4</div>
+      <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 10px; color: rgba(242, 231, 207, 0.4);">30 GAMES</div>
+      <div style="flex-grow: 1; width: 3px; background: linear-gradient(180deg, #35d377, rgba(53, 211, 119, 0.05)); border-radius: 2px;"></div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; flex-grow: 1;">
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) 150px 296px 90px 220px; gap: 14px; align-items: center; padding: 0 14px 8px; font-family: 'JetBrains Mono', Consolas, monospace; font-size: 9px; letter-spacing: 1.5px; color: rgba(242, 231, 207, 0.3);">
+        <span>GAME</span>
+        <span>TEACH</span>
+        <div style="display: flex; gap: 4px;"><span style="display: flex; justify-content: center; width: 28px;">1</span><span style="display: flex; justify-content: center; width: 28px;">2</span><span style="display: flex; justify-content: center; width: 28px;">3</span><span style="display: flex; justify-content: center; width: 28px; color: #f59e0b;">4</span><span style="display: flex; justify-content: center; width: 28px;">5</span><span style="display: flex; justify-content: center; width: 28px;">6</span><span style="display: flex; justify-content: center; width: 28px;">7</span><span style="display: flex; justify-content: center; width: 28px;">8</span></div>
+        <span>SWEET</span>
+        <span>VIBES</span>
+      </div>
+
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) 150px 296px 90px 220px; gap: 14px; align-items: center; padding: 10px 14px; border-top: 1px solid rgba(242, 231, 207, 0.07); background: rgba(53, 211, 119, 0.07);">
+        <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 21px; letter-spacing: 0.3px;">Bomb Busters</div>
+        <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 10px; color: rgba(242, 231, 207, 0.5);">instant</div>
+        <div style="display: flex; gap: 4px; font-family: 'JetBrains Mono', Consolas, monospace; font-size: 13px; font-weight: 700;">
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: rgba(242, 231, 207, 0.15);">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #f58d3e;">C</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #ecc23c;">B</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #35d377; background: rgba(245, 158, 11, 0.13); border-radius: 4px;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #35d377;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: rgba(242, 231, 207, 0.15);">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: rgba(242, 231, 207, 0.15);">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: rgba(242, 231, 207, 0.15);">·</span>
+        </div>
+        <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 11px; color: #f59e0b;">4–5p</div>
+        <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 10px; color: rgba(242, 231, 207, 0.45);">coop · puzzle · party</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) 150px 296px 90px 220px; gap: 14px; align-items: center; padding: 10px 14px; border-top: 1px solid rgba(242, 231, 207, 0.07); background: rgba(53, 211, 119, 0.07);">
+        <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 21px; letter-spacing: 0.3px;">Just One</div>
+        <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 10px; color: rgba(242, 231, 207, 0.5);">instant</div>
+        <div style="display: flex; gap: 4px; font-family: 'JetBrains Mono', Consolas, monospace; font-size: 13px; font-weight: 700;">
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: rgba(242, 231, 207, 0.15);">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: rgba(242, 231, 207, 0.15);">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #a8cf3a;">A</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #35d377; background: rgba(245, 158, 11, 0.13); border-radius: 4px;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #35d377;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #35d377;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #a8cf3a;">A</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: rgba(242, 231, 207, 0.15);">·</span>
+        </div>
+        <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 11px; color: #f59e0b;">4–6p</div>
+        <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 10px; color: rgba(242, 231, 207, 0.45);">coop · party · filler</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) 150px 296px 90px 220px; gap: 14px; align-items: center; padding: 10px 14px; border-top: 1px solid rgba(242, 231, 207, 0.07); background: rgba(168, 207, 58, 0.07);">
+        <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 21px; letter-spacing: 0.3px;">Heat: Pedal to the Metal</div>
+        <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 10px; color: rgba(242, 231, 207, 0.5);">~10 min</div>
+        <div style="display: flex; gap: 4px; font-family: 'JetBrains Mono', Consolas, monospace; font-size: 13px; font-weight: 700;">
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #ecc23c;">B</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #ecc23c;">B</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #a8cf3a;">A</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #35d377; background: rgba(245, 158, 11, 0.13); border-radius: 4px;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #35d377;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #35d377;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: rgba(242, 231, 207, 0.15);">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: rgba(242, 231, 207, 0.15);">·</span>
+        </div>
+        <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 11px; color: #f59e0b;">4–6p</div>
+        <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 10px; color: rgba(242, 231, 207, 0.45);">racing · strategy · solo</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) 150px 296px 90px 220px; gap: 14px; align-items: center; padding: 10px 14px; border-top: 1px solid rgba(242, 231, 207, 0.07); background: rgba(236, 194, 60, 0.08);">
+        <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 21px; letter-spacing: 0.3px;">Concordia</div>
+        <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 10px; color: rgba(242, 231, 207, 0.5);">~30 min</div>
+        <div style="display: flex; gap: 4px; font-family: 'JetBrains Mono', Consolas, monospace; font-size: 13px; font-weight: 700;">
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: rgba(242, 231, 207, 0.15);">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #f58d3e;">C</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #ecc23c;">B</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #35d377; background: rgba(245, 158, 11, 0.13); border-radius: 4px;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #35d377;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: rgba(242, 231, 207, 0.15);">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: rgba(242, 231, 207, 0.15);">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: rgba(242, 231, 207, 0.15);">·</span>
+        </div>
+        <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 11px; color: #f59e0b;">4–5p</div>
+        <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 10px; color: rgba(242, 231, 207, 0.45);">strategy · engine builder</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) 150px 296px 90px 220px; gap: 14px; align-items: center; padding: 10px 14px; border-top: 1px solid rgba(242, 231, 207, 0.07); background: rgba(236, 194, 60, 0.08);">
+        <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 21px; letter-spacing: 0.3px;">Dune Imperium</div>
+        <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 10px; color: rgba(242, 231, 207, 0.5);">~30 min</div>
+        <div style="display: flex; gap: 4px; font-family: 'JetBrains Mono', Consolas, monospace; font-size: 13px; font-weight: 700;">
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #a8cf3a;">A</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #a8cf3a;">A</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #35d377;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #35d377; background: rgba(245, 158, 11, 0.13); border-radius: 4px;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: rgba(242, 231, 207, 0.15);">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: rgba(242, 231, 207, 0.15);">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: rgba(242, 231, 207, 0.15);">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: rgba(242, 231, 207, 0.15);">·</span>
+        </div>
+        <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 11px; color: #f59e0b;">3–4p</div>
+        <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 10px; color: rgba(242, 231, 207, 0.45);">worker placement · deckbuilder</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) 150px 296px 90px 220px; gap: 14px; align-items: center; padding: 10px 14px; border-top: 1px solid rgba(242, 231, 207, 0.07); background: rgba(236, 194, 60, 0.08);">
+        <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 21px; letter-spacing: 0.3px;">Ra — Sun God Edition</div>
+        <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 10px; color: rgba(242, 231, 207, 0.5);">~30 min</div>
+        <div style="display: flex; gap: 4px; font-family: 'JetBrains Mono', Consolas, monospace; font-size: 13px; font-weight: 700;">
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: rgba(242, 231, 207, 0.15);">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #ecc23c;">B</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #35d377;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #35d377; background: rgba(245, 158, 11, 0.13); border-radius: 4px;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #a8cf3a;">A</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: rgba(242, 231, 207, 0.15);">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: rgba(242, 231, 207, 0.15);">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: rgba(242, 231, 207, 0.15);">·</span>
+        </div>
+        <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 11px; color: #f59e0b;">3–4p</div>
+        <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 10px; color: rgba(242, 231, 207, 0.45);">auction · strategy</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) 150px 296px 90px 220px; gap: 14px; align-items: center; padding: 10px 14px; border-top: 1px solid rgba(242, 231, 207, 0.07); background: rgba(245, 141, 62, 0.1);">
+        <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 21px; letter-spacing: 0.3px;">Brass: Birmingham</div>
+        <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 10px; color: rgba(242, 231, 207, 0.5);">experienced</div>
+        <div style="display: flex; gap: 4px; font-family: 'JetBrains Mono', Consolas, monospace; font-size: 13px; font-weight: 700;">
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: rgba(242, 231, 207, 0.15);">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #a8cf3a;">A</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #35d377;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #35d377; background: rgba(245, 158, 11, 0.13); border-radius: 4px;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: rgba(242, 231, 207, 0.15);">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: rgba(242, 231, 207, 0.15);">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: rgba(242, 231, 207, 0.15);">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: rgba(242, 231, 207, 0.15);">·</span>
+        </div>
+        <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 11px; color: #f59e0b;">3–4p</div>
+        <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 10px; color: rgba(242, 231, 207, 0.45);">strategy · engine builder</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) 150px 296px 90px 220px; gap: 14px; align-items: center; padding: 10px 14px; border-top: 1px solid rgba(242, 231, 207, 0.07); background: rgba(245, 141, 62, 0.1);">
+        <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 21px; letter-spacing: 0.3px;">Scythe (Base Game)</div>
+        <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 10px; color: rgba(242, 231, 207, 0.5);">experienced</div>
+        <div style="display: flex; gap: 4px; font-family: 'JetBrains Mono', Consolas, monospace; font-size: 13px; font-weight: 700;">
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #a8cf3a;">A</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #a8cf3a;">A</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #35d377;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #35d377; background: rgba(245, 158, 11, 0.13); border-radius: 4px;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #ecc23c;">B</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: rgba(242, 231, 207, 0.15);">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: rgba(242, 231, 207, 0.15);">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: rgba(242, 231, 207, 0.15);">·</span>
+        </div>
+        <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 11px; color: #f59e0b;">3–4p</div>
+        <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 10px; color: rgba(242, 231, 207, 0.45);">strategy · engine builder</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; gap: 22px; padding: 26px 44px 0;">
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; width: 92px; flex-shrink: 0; padding-top: 34px;">
+      <svg width="60" height="60" viewBox="0 0 64 64"><circle cx="32" cy="32" r="29" fill="#a8cf3a"></circle><text x="32" y="34" text-anchor="middle" dominant-baseline="central" font-family="'Barlow Condensed','Arial Narrow',sans-serif" font-weight="800" font-size="30" fill="#14100b">A</text></svg>
+      <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 2px; color: #a8cf3a; text-transform: uppercase; text-align: center; line-height: 1.3;">Very good<br>at 4</div>
+      <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 10px; color: rgba(242, 231, 207, 0.4);">30 GAMES</div>
+      <div style="flex-grow: 1; width: 3px; background: linear-gradient(180deg, #a8cf3a, rgba(168, 207, 58, 0.05)); border-radius: 2px;"></div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; flex-grow: 1;">
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) 150px 296px 90px 220px; gap: 14px; align-items: center; padding: 0 14px 8px; font-family: 'JetBrains Mono', Consolas, monospace; font-size: 9px; letter-spacing: 1.5px; color: rgba(242, 231, 207, 0.3);">
+        <span>GAME</span>
+        <span>TEACH</span>
+        <div style="display: flex; gap: 4px;"><span style="display: flex; justify-content: center; width: 28px;">1</span><span style="display: flex; justify-content: center; width: 28px;">2</span><span style="display: flex; justify-content: center; width: 28px;">3</span><span style="display: flex; justify-content: center; width: 28px; color: #f59e0b;">4</span><span style="display: flex; justify-content: center; width: 28px;">5</span><span style="display: flex; justify-content: center; width: 28px;">6</span><span style="display: flex; justify-content: center; width: 28px;">7</span><span style="display: flex; justify-content: center; width: 28px;">8</span></div>
+        <span>SWEET</span>
+        <span>VIBES</span>
+      </div>
+
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) 150px 296px 90px 220px; gap: 14px; align-items: center; padding: 10px 14px; border-top: 1px solid rgba(242, 231, 207, 0.07); background: rgba(53, 211, 119, 0.07);">
+        <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 21px; letter-spacing: 0.3px;">Carcassonne Big Box</div>
+        <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 10px; color: rgba(242, 231, 207, 0.5);">instant</div>
+        <div style="display: flex; gap: 4px; font-family: 'JetBrains Mono', Consolas, monospace; font-size: 13px; font-weight: 700;">
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: rgba(242, 231, 207, 0.15);">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #35d377;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #35d377;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #a8cf3a; background: rgba(245, 158, 11, 0.13); border-radius: 4px;">A</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #f58d3e;">C</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: rgba(242, 231, 207, 0.15);">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: rgba(242, 231, 207, 0.15);">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: rgba(242, 231, 207, 0.15);">·</span>
+        </div>
+        <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 11px; color: #f59e0b;">2–3p</div>
+        <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 10px; color: rgba(242, 231, 207, 0.45);">strategy · filler · chill</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) 150px 296px 90px 220px; gap: 14px; align-items: center; padding: 10px 14px; border-top: 1px solid rgba(242, 231, 207, 0.07); background: rgba(53, 211, 119, 0.07);">
+        <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 21px; letter-spacing: 0.3px;">Codenames</div>
+        <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 10px; color: rgba(242, 231, 207, 0.5);">instant</div>
+        <div style="display: flex; gap: 4px; font-family: 'JetBrains Mono', Consolas, monospace; font-size: 13px; font-weight: 700;">
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: rgba(242, 231, 207, 0.15);">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #f58d3e;">C</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: rgba(242, 231, 207, 0.15);">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #a8cf3a; background: rgba(245, 158, 11, 0.13); border-radius: 4px;">A</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: rgba(242, 231, 207, 0.15);">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #35d377;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: rgba(242, 231, 207, 0.15);">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #35d377;">S</span>
+        </div>
+        <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 11px; color: #f59e0b;">6–8p</div>
+        <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 10px; color: rgba(242, 231, 207, 0.45);">party · coop</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) 150px 296px 90px 220px; gap: 14px; align-items: center; padding: 10px 14px; border-top: 1px solid rgba(242, 231, 207, 0.07); background: rgba(168, 207, 58, 0.07);">
+        <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 21px; letter-spacing: 0.3px;">Dominion Big Box</div>
+        <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 10px; color: rgba(242, 231, 207, 0.5);">~10 min</div>
+        <div style="display: flex; gap: 4px; font-family: 'JetBrains Mono', Consolas, monospace; font-size: 13px; font-weight: 700;">
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: rgba(242, 231, 207, 0.15);">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #a8cf3a;">A</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #35d377;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #a8cf3a; background: rgba(245, 158, 11, 0.13); border-radius: 4px;">A</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: rgba(242, 231, 207, 0.15);">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: rgba(242, 231, 207, 0.15);">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: rgba(242, 231, 207, 0.15);">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: rgba(242, 231, 207, 0.15);">·</span>
+        </div>
+        <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 11px; color: #f59e0b;">3p</div>
+        <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 10px; color: rgba(242, 231, 207, 0.45);">deckbuilder · strategy</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) 150px 296px 90px 220px; gap: 14px; align-items: center; padding: 10px 14px; border-top: 1px solid rgba(242, 231, 207, 0.07); background: rgba(236, 194, 60, 0.08);">
+        <div style="font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 21px; letter-spacing: 0.3px;">Everdell</div>
+        <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 10px; color: rgba(242, 231, 207, 0.5);">~30 min</div>
+        <div style="display: flex; gap: 4px; font-family: 'JetBrains Mono', Consolas, monospace; font-size: 13px; font-weight: 700;">
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #a8cf3a;">A</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #35d377;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #35d377;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #a8cf3a; background: rgba(245, 158, 11, 0.13); border-radius: 4px;">A</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: rgba(242, 231, 207, 0.15);">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: rgba(242, 231, 207, 0.15);">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: rgba(242, 231, 207, 0.15);">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: rgba(242, 231, 207, 0.15);">·</span>
+        </div>
+        <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 11px; color: #f59e0b;">2–3p</div>
+        <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 10px; color: rgba(242, 231, 207, 0.45);">worker placement · engine builder</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="position: absolute; left: 0; right: 0; bottom: 0; height: 120px; background: linear-gradient(180deg, rgba(20, 16, 11, 0), #14100b 80%); pointer-events: none;"></div>
+</div>
+</x-dc>
+<script data-dc-script data-props='{"$preview": {"width": 1440, "height": 1340}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

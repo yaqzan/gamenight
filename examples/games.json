@@ -1,0 +1,239 @@
+[
+  {
+    "name": "Brass: Birmingham",
+    "learn": "C",
+    "pc": {
+      "2": "A",
+      "3": "S",
+      "4": "S"
+    },
+    "vibes": [
+      "Strategy",
+      "Engine Builder"
+    ],
+    "sweet": "3-4p",
+    "note": "Two eras, 6 actions — takes a play to click. Board scales by player count. Peak experience at 3-4p.",
+    "image": "https://cf.geekdo-images.com/x3zxjr-Vw5iU4yDPg70Jgw__original/img/FpyxH41Y6_ROoePAilPNEhXnzO8=/0x0/filters:format(jpeg)/pic3490053.jpg",
+    "bggId": "224517",
+    "time": {
+      "2": 60,
+      "3": 90,
+      "4": 120
+    }
+  },
+  {
+    "name": "Catan",
+    "learn": "A",
+    "pc": {
+      "3": "C",
+      "4": "S",
+      "5": "B",
+      "6": "B"
+    },
+    "vibes": [
+      "Strategy",
+      "Auction",
+      "Engine Builder"
+    ],
+    "sweet": "4p",
+    "note": "3p is too open and trade-light. 5-6p with extension adds turns-without-building to compensate.",
+    "image": "https://cf.geekdo-images.com/0XODRpReiZBFUffEcqT5-Q__original/img/oRc0AomWA9ZtFqQDZiZbIyKE1j0=/0x0/filters:format(png)/pic9156909.png",
+    "bggId": "13",
+    "time": {
+      "3": 60,
+      "4": 80,
+      "5": 100,
+      "6": 120
+    }
+  },
+  {
+    "name": "Codenames",
+    "learn": "S",
+    "pc": {
+      "2": "C",
+      "4": "A",
+      "6": "S",
+      "8": "S"
+    },
+    "vibes": [
+      "Party",
+      "Cooperative"
+    ],
+    "sweet": "6-8p",
+    "note": "2p needs the Duet variant; standard needs proper teams of 3-4 each side.",
+    "image": "https://cf.geekdo-images.com/nC6ifPCDnAItwoKSKXVrnw__original/img/Id-jjIer_61ZbvI2_RVRCeBZFY4=/0x0/filters:format(jpeg)/pic8907965.jpg",
+    "bggId": "178900",
+    "time": {
+      "2": 15,
+      "4": 15,
+      "6": 15,
+      "8": 15
+    }
+  },
+  {
+    "name": "Concordia",
+    "learn": "B",
+    "pc": {
+      "2": "C",
+      "3": "B",
+      "4": "S",
+      "5": "S"
+    },
+    "vibes": [
+      "Strategy",
+      "Engine Builder"
+    ],
+    "sweet": "4-5p",
+    "note": "DO NOT play at 2p. Meeple Mountain would never choose it under 4p. Brilliant and elegant at 4-5p.",
+    "image": "https://cf.geekdo-images.com/CzwSm8i7tkLz6cBnrILZBg__original/img/BhJ3sB3uk-eSdR1iW4EP3cu0Wi0=/0x0/filters:format(jpeg)/pic3453267.jpg",
+    "bggId": "124361",
+    "time": {
+      "2": 100,
+      "3": 100,
+      "4": 100,
+      "5": 100
+    }
+  },
+  {
+    "name": "Honey Buzz",
+    "learn": "B",
+    "pc": {
+      "2": "S",
+      "3": "A",
+      "4": "C"
+    },
+    "vibes": [
+      "Strategy",
+      "Worker Placement",
+      "Engine Builder"
+    ],
+    "sweet": "2p",
+    "note": "Falls apart at 4p due to blocking and AP spirals. Works beautifully at 2p — feels tight and decisive.",
+    "image": "https://cf.geekdo-images.com/q3KbDdmiSkvKucANAdOU1g__original/img/2mJguceZAdOqSem23FEHobaZ0a4=/0x0/filters:format(jpeg)/pic5608344.jpg",
+    "bggId": "284742",
+    "time": {
+      "2": 45,
+      "3": 70,
+      "4": 90
+    }
+  },
+  {
+    "name": "Love Letter",
+    "learn": "S",
+    "pc": {
+      "2": "C",
+      "3": "S",
+      "4": "S",
+      "5": "A",
+      "6": "A"
+    },
+    "vibes": [
+      "Filler",
+      "Social Deduction"
+    ],
+    "sweet": "3-4p",
+    "note": "A crashing bore at 2p — not enough players to make the deduction interesting. Shines with 3-4 where tells and bluffing matter. Large luck element levels the playing field nicely.",
+    "image": "https://cf.geekdo-images.com/T1ltXwapFUtghS9A7_tf4g__original/img/xIAzJY7rl-mtPStRZSqnTVsAr8Y=/0x0/filters:format(jpeg)/pic1401448.jpg",
+    "bggId": "129622",
+    "time": {
+      "2": 20,
+      "3": 20,
+      "4": 20,
+      "5": 20,
+      "6": 20
+    }
+  },
+  {
+    "name": "Pandemic",
+    "learn": "A",
+    "pc": {
+      "2": "A",
+      "3": "S",
+      "4": "A"
+    },
+    "vibes": [
+      "Cooperative",
+      "Strategy"
+    ],
+    "sweet": "3p",
+    "note": "The gateway coop. 4p risks alpha-quarterbacking. 3p is the balanced sweet spot.",
+    "image": "https://cf.geekdo-images.com/S3ybV1LAp-8SnHIXLLjVqA__original/img/IsrvRLpUV1TEyZsO5rC-btXaPz0=/0x0/filters:format(jpeg)/pic1534148.jpg",
+    "bggId": "30549",
+    "time": {
+      "2": 45,
+      "3": 45,
+      "4": 45
+    }
+  },
+  {
+    "name": "Patchwork",
+    "learn": "S",
+    "pc": {
+      "2": "S"
+    },
+    "vibes": [
+      "Duel",
+      "Puzzle",
+      "Filler"
+    ],
+    "sweet": "2p",
+    "note": "The iconic 2p tile-fitting game. Teach in 90 seconds. Endlessly replayable.",
+    "image": "https://cf.geekdo-images.com/xNSaIHCKr_cc7Q2rQSSJPQ__original/img/HJJdVosBV35kj8pQ6wmQMiJRhVA=/0x0/filters:format(jpeg)/pic9273518.jpg",
+    "bggId": "163412",
+    "time": {
+      "2": 30
+    }
+  },
+  {
+    "name": "Ticket to Ride",
+    "learn": "S",
+    "pc": {
+      "2": "B",
+      "3": "A",
+      "4": "S",
+      "5": "B"
+    },
+    "vibes": [
+      "Strategy",
+      "Filler",
+      "Racing"
+    ],
+    "sweet": "3-4p",
+    "note": "5p games drag past 2 hours. 2p is too open. 3-4p is where route-blocking creates real tension.",
+    "image": "https://cf.geekdo-images.com/kdWYkW-7AqG63HhqPL6ekA__original/img/rWF8r4JXXCQQ7QhiWHhmT-rQ3Pc=/0x0/filters:format(jpeg)/pic8937637.jpg",
+    "bggId": "9209",
+    "time": {
+      "2": 30,
+      "3": 40,
+      "4": 50,
+      "5": 60
+    }
+  },
+  {
+    "name": "Wavelength",
+    "learn": "S",
+    "pc": {
+      "2": "B",
+      "4": "A",
+      "6": "S",
+      "8": "S",
+      "10": "S",
+      "12": "A"
+    },
+    "vibes": [
+      "Party"
+    ],
+    "sweet": "6-10p",
+    "note": "The dial-discussion mechanic shines with bigger teams. Perfect for large gatherings.",
+    "image": "https://cf.geekdo-images.com/z4fbPdmJg_5yphJEvql4ZA__original/img/bP1gM8RC-o5iz20_WazBaBNDHnU=/0x0/filters:format(png)/pic4552862.png",
+    "bggId": "262543",
+    "time": {
+      "2": 30,
+      "4": 35,
+      "6": 35,
+      "8": 40,
+      "10": 40,
+      "12": 45
+    }
+  }
+]

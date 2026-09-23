@@ -1,0 +1,387 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&amp;family=Nunito+Sans:wght@400;700;800&amp;display=swap">
+  <style>
+    body { margin: 0; background: #fdf8ee; }
+    a { color: #e2504e; }
+    a:hover { color: #b93835; }
+  </style>
+</helmet>
+<div style="position: relative; width: 1440px; height: 1340px; overflow: hidden; background: #fdf8ee; color: #33251b; font-family: 'Nunito Sans', Verdana, sans-serif;">
+
+  <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 16px 48px; border-bottom: 3px solid #33251b;">
+    <div style="display: flex; align-items: center; gap: 13px;">
+      <svg width="42" height="42" viewBox="0 0 64 64"><circle cx="32" cy="32" r="28" fill="none" stroke="#33251b" stroke-width="3" stroke-dasharray="3 8" stroke-linecap="round"></circle><g transform="rotate(45 32 32)"><rect x="18" y="21" width="26" height="26" rx="7" fill="#33251b"></rect><rect x="18" y="18" width="26" height="26" rx="7" fill="#e2504e" stroke="#33251b" stroke-width="2.5"></rect><g fill="#fdf8ee"><circle cx="25" cy="25" r="2.4"></circle><circle cx="37" cy="25" r="2.4"></circle><circle cx="31" cy="31" r="2.4"></circle><circle cx="25" cy="37" r="2.4"></circle><circle cx="37" cy="37" r="2.4"></circle></g></g></svg>
+      <div style="font-family: 'Lilita One', 'Arial Rounded MT Bold', sans-serif; font-size: 27px; letter-spacing: 0.5px;">Game Night Compass</div>
+    </div>
+    <div style="display: flex; align-items: center; gap: 18px;">
+      <div style="font-weight: 800; font-size: 13px; color: #6e5a49;">96 games on the shelf</div>
+      <div style="display: flex; align-items: center; gap: 10px; background: #e2504e; color: #ffffff; padding: 12px 24px; border: 3px solid #33251b; border-radius: 16px; font-family: 'Lilita One', 'Arial Rounded MT Bold', sans-serif; font-size: 17px; letter-spacing: 0.5px; box-shadow: 0 4px 0 #33251b;">
+        <svg width="18" height="18" viewBox="0 0 24 24"><rect x="2.5" y="2.5" width="19" height="19" rx="5" fill="none" stroke="currentColor" stroke-width="2.4"></rect><circle cx="8" cy="8" r="1.9" fill="currentColor"></circle><circle cx="16" cy="8" r="1.9" fill="currentColor"></circle><circle cx="12" cy="12" r="1.9" fill="currentColor"></circle><circle cx="8" cy="16" r="1.9" fill="currentColor"></circle><circle cx="16" cy="16" r="1.9" fill="currentColor"></circle></svg>
+        <span>Roll the dice</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 20px; padding: 32px 48px 24px;">
+    <div style="display: flex; flex-direction: column; gap: 8px;">
+      <div style="font-family: 'Lilita One', 'Arial Rounded MT Bold', sans-serif; font-size: 52px; line-height: 1.02;">Which game tonight?</div>
+      <div style="font-size: 17px; font-weight: 700; color: #6e5a49; max-width: 660px; line-height: 1.5;">The whole shelf, tiered by how each game actually plays at every player count.</div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 10px;">
+      <div style="font-weight: 800; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #6e5a49;">How many players tonight?</div>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <div style="display: flex; align-items: center; justify-content: center; height: 48px; padding: 0 20px; border: 3px solid #d9c9b4; border-radius: 24px; font-weight: 800; font-size: 15px; color: #a08d78; background: #ffffff;">Any</div>
+        <div style="display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border: 3px solid #d9c9b4; border-radius: 50%; font-weight: 800; font-size: 17px; color: #a08d78; background: #ffffff;">1</div>
+        <div style="display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border: 3px solid #d9c9b4; border-radius: 50%; font-weight: 800; font-size: 17px; color: #a08d78; background: #ffffff;">2</div>
+        <div style="display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border: 3px solid #d9c9b4; border-radius: 50%; font-weight: 800; font-size: 17px; color: #a08d78; background: #ffffff;">3</div>
+        <div style="display: flex; align-items: center; justify-content: center; width: 54px; height: 54px; border: 3px solid #33251b; border-radius: 50%; font-weight: 800; font-size: 20px; color: #ffffff; background: #e2504e; transform: rotate(-5deg); box-shadow: 0 4px 0 #33251b;">4</div>
+        <div style="display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border: 3px solid #d9c9b4; border-radius: 50%; font-weight: 800; font-size: 17px; color: #a08d78; background: #ffffff;">5</div>
+        <div style="display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border: 3px solid #d9c9b4; border-radius: 50%; font-weight: 800; font-size: 17px; color: #a08d78; background: #ffffff;">6</div>
+        <div style="display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border: 3px solid #d9c9b4; border-radius: 50%; font-weight: 800; font-size: 17px; color: #a08d78; background: #ffffff;">7</div>
+        <div style="display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border: 3px solid #d9c9b4; border-radius: 50%; font-weight: 800; font-size: 17px; color: #a08d78; background: #ffffff;">8</div>
+        <div style="display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border: 3px solid #d9c9b4; border-radius: 50%; font-weight: 800; font-size: 17px; color: #a08d78; background: #ffffff;">9</div>
+        <div style="display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border: 3px solid #d9c9b4; border-radius: 50%; font-weight: 800; font-size: 17px; color: #a08d78; background: #ffffff;">10</div>
+        <div style="display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border: 3px solid #d9c9b4; border-radius: 50%; font-weight: 800; font-size: 17px; color: #a08d78; background: #ffffff;">12</div>
+        <div style="font-weight: 800; font-size: 13px; color: #e2504e; padding-left: 8px;">78 of 96 play at 4!</div>
+      </div>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+      <div style="display: flex; align-items: center; gap: 8px; background: #ffffff; border: 3px solid #d9c9b4; border-radius: 22px; padding: 10px 18px; color: #a08d78; width: 250px;">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"></circle><line x1="15.5" y1="15.5" x2="20.5" y2="20.5"></line></svg>
+        <span style="font-weight: 700; font-size: 13px;">search the shelf…</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-weight: 800; font-size: 13px;">
+        <span style="background: rgba(99, 102, 241, 0.14); color: #4649c9; border-radius: 20px; padding: 8px 15px;">Strategy</span>
+        <span style="background: rgba(245, 158, 11, 0.16); color: #b26a00; border-radius: 20px; padding: 8px 15px;">Party</span>
+        <span style="background: rgba(16, 185, 129, 0.14); color: #0b7d58; border-radius: 20px; padding: 8px 15px;">Cooperative</span>
+        <span style="background: rgba(236, 72, 153, 0.13); color: #c22e77; border-radius: 20px; padding: 8px 15px;">Duel</span>
+        <span style="background: rgba(148, 163, 184, 0.2); color: #5d6b7e; border-radius: 20px; padding: 8px 15px;">Filler</span>
+        <span style="background: rgba(34, 197, 94, 0.14); color: #15803c; border-radius: 20px; padding: 8px 15px;">Chill</span>
+        <span style="color: #a08d78; font-weight: 800; padding: 8px 4px;">+ 10 more</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 8px; background: #ffffff; border: 3px dashed #d9c9b4; border-radius: 22px; padding: 8px 16px; font-weight: 800; font-size: 12px; color: #6e5a49;">
+        <span style="color: #a08d78;">teach gate:</span>
+        <span>anything goes</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 0;">
+
+    <div style="background: rgba(23, 178, 107, 0.1); padding: 22px 48px 24px; display: flex; flex-direction: column; gap: 16px;">
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <svg width="54" height="58" viewBox="0 0 64 68"><path d="M32 7.5 L39.6 25.1 L58.7 26.7 L44.3 39.4 L48.6 58.1 L32 48.2 L15.4 58.1 L19.7 39.4 L5.3 26.7 L24.4 25.1 Z" fill="#33251b"></path><path d="M32 4 L39.6 21.6 L58.7 23.2 L44.3 35.9 L48.6 54.6 L32 44.7 L15.4 54.6 L19.7 35.9 L5.3 23.2 L24.4 21.6 Z" fill="#17b26b" stroke="#33251b" stroke-width="3" stroke-linejoin="round"></path><text x="32" y="32" text-anchor="middle" dominant-baseline="central" font-family="'Lilita One','Arial Rounded MT Bold',sans-serif" font-size="22" fill="#ffffff">S</text></svg>
+        <div style="display: flex; flex-direction: column; gap: 1px;">
+          <div style="font-family: 'Lilita One', 'Arial Rounded MT Bold', sans-serif; font-size: 26px;">The S shelf</div>
+          <div style="font-weight: 800; font-size: 13px; color: #0e8a4f;">30 games play GREAT with 4 players</div>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px;">
+
+        <div style="display: flex; flex-direction: column; gap: 10px; background: #ffffff; border: 3px solid #33251b; border-radius: 16px; padding: 16px; box-shadow: 0 4px 0 #33251b;">
+          <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 8px;">
+            <div style="font-family: 'Lilita One', 'Arial Rounded MT Bold', sans-serif; font-size: 19px; line-height: 1.15;">Brass: Birmingham</div>
+            <svg width="30" height="32" viewBox="0 0 64 68" style="flex-shrink: 0;"><rect x="8" y="11" width="48" height="48" rx="12" fill="#33251b"></rect><rect x="8" y="8" width="48" height="48" rx="12" fill="#f5822a" stroke="#33251b" stroke-width="3"></rect><text x="32" y="33" text-anchor="middle" dominant-baseline="central" font-family="'Lilita One','Arial Rounded MT Bold',sans-serif" font-size="26" fill="#ffffff">C</text></svg>
+          </div>
+          <div style="font-weight: 700; font-size: 12px; color: #cc6414;">needs an experienced table</div>
+          <div style="display: flex; gap: 5px; flex-wrap: wrap;">
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: rgba(143, 195, 44, 0.18); border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #6d9a17;">2 <strong style="font-weight: 800;">A</strong></span>
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: rgba(23, 178, 107, 0.16); border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #0e8a4f;">3 <strong style="font-weight: 800;">S</strong></span>
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: #17b26b; border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #ffffff;">4 <strong style="font-weight: 800;">S</strong></span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 6px; font-weight: 800; font-size: 12px; color: #e2504e;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L14.9 8.6 L22 9.3 L16.6 14 L18.2 21 L12 17.3 L5.8 21 L7.4 14 L2 9.3 L9.1 8.6 Z"></path></svg>
+            <span>sweet at 3–4p</span>
+          </div>
+          <div style="display: flex; gap: 5px; flex-wrap: wrap; font-size: 11px; font-weight: 800;">
+            <span style="background: rgba(99, 102, 241, 0.12); color: #4649c9; border-radius: 12px; padding: 3px 9px;">Strategy</span>
+            <span style="background: rgba(6, 182, 212, 0.12); color: #087f96; border-radius: 12px; padding: 3px 9px;">Engine Builder</span>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 10px; background: #ffffff; border: 3px solid #33251b; border-radius: 16px; padding: 16px; box-shadow: 0 4px 0 #33251b;">
+          <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 8px;">
+            <div style="font-family: 'Lilita One', 'Arial Rounded MT Bold', sans-serif; font-size: 19px; line-height: 1.15;">Bomb Busters</div>
+            <svg width="30" height="32" viewBox="0 0 64 68" style="flex-shrink: 0;"><path d="M32 7.5 L39.6 25.1 L58.7 26.7 L44.3 39.4 L48.6 58.1 L32 48.2 L15.4 58.1 L19.7 39.4 L5.3 26.7 L24.4 25.1 Z" fill="#33251b"></path><path d="M32 4 L39.6 21.6 L58.7 23.2 L44.3 35.9 L48.6 54.6 L32 44.7 L15.4 54.6 L19.7 35.9 L5.3 23.2 L24.4 21.6 Z" fill="#17b26b" stroke="#33251b" stroke-width="3" stroke-linejoin="round"></path><text x="32" y="32" text-anchor="middle" dominant-baseline="central" font-family="'Lilita One','Arial Rounded MT Bold',sans-serif" font-size="22" fill="#ffffff">S</text></svg>
+          </div>
+          <div style="font-weight: 700; font-size: 12px; color: #0e8a4f;">instant teach</div>
+          <div style="display: flex; gap: 5px; flex-wrap: wrap;">
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: rgba(245, 130, 42, 0.16); border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #cc6414;">2 <strong style="font-weight: 800;">C</strong></span>
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: rgba(245, 197, 24, 0.2); border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #b28d00;">3 <strong style="font-weight: 800;">B</strong></span>
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: #17b26b; border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #ffffff;">4 <strong style="font-weight: 800;">S</strong></span>
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: rgba(23, 178, 107, 0.16); border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #0e8a4f;">5 <strong style="font-weight: 800;">S</strong></span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 6px; font-weight: 800; font-size: 12px; color: #e2504e;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L14.9 8.6 L22 9.3 L16.6 14 L18.2 21 L12 17.3 L5.8 21 L7.4 14 L2 9.3 L9.1 8.6 Z"></path></svg>
+            <span>sweet at 4–5p</span>
+          </div>
+          <div style="display: flex; gap: 5px; flex-wrap: wrap; font-size: 11px; font-weight: 800;">
+            <span style="background: rgba(16, 185, 129, 0.12); color: #0b7d58; border-radius: 12px; padding: 3px 9px;">Cooperative</span>
+            <span style="background: rgba(14, 165, 233, 0.12); color: #0873a8; border-radius: 12px; padding: 3px 9px;">Puzzle</span>
+            <span style="background: rgba(245, 158, 11, 0.14); color: #b26a00; border-radius: 12px; padding: 3px 9px;">Party</span>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 10px; background: #ffffff; border: 3px solid #33251b; border-radius: 16px; padding: 16px; box-shadow: 0 4px 0 #33251b;">
+          <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 8px;">
+            <div style="font-family: 'Lilita One', 'Arial Rounded MT Bold', sans-serif; font-size: 19px; line-height: 1.15;">Heat: Pedal to the Metal</div>
+            <svg width="30" height="32" viewBox="0 0 64 68" style="flex-shrink: 0;"><path d="M32 7.5 L56 21.5 L56 49.5 L32 63.5 L8 49.5 L8 21.5 Z" fill="#33251b"></path><path d="M32 4 L56 18 L56 46 L32 60 L8 46 L8 18 Z" fill="#8fc32c" stroke="#33251b" stroke-width="3" stroke-linejoin="round"></path><text x="32" y="33" text-anchor="middle" dominant-baseline="central" font-family="'Lilita One','Arial Rounded MT Bold',sans-serif" font-size="24" fill="#ffffff">A</text></svg>
+          </div>
+          <div style="font-weight: 700; font-size: 12px; color: #6d9a17;">~10 minute teach</div>
+          <div style="display: flex; gap: 5px; flex-wrap: wrap;">
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: rgba(245, 197, 24, 0.2); border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #b28d00;">1 <strong style="font-weight: 800;">B</strong></span>
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: rgba(245, 197, 24, 0.2); border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #b28d00;">2 <strong style="font-weight: 800;">B</strong></span>
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: rgba(143, 195, 44, 0.18); border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #6d9a17;">3 <strong style="font-weight: 800;">A</strong></span>
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: #17b26b; border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #ffffff;">4 <strong style="font-weight: 800;">S</strong></span>
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: rgba(23, 178, 107, 0.16); border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #0e8a4f;">5 <strong style="font-weight: 800;">S</strong></span>
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: rgba(23, 178, 107, 0.16); border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #0e8a4f;">6 <strong style="font-weight: 800;">S</strong></span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 6px; font-weight: 800; font-size: 12px; color: #e2504e;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L14.9 8.6 L22 9.3 L16.6 14 L18.2 21 L12 17.3 L5.8 21 L7.4 14 L2 9.3 L9.1 8.6 Z"></path></svg>
+            <span>sweet at 4–6p</span>
+          </div>
+          <div style="display: flex; gap: 5px; flex-wrap: wrap; font-size: 11px; font-weight: 800;">
+            <span style="background: rgba(251, 146, 60, 0.14); color: #c25a10; border-radius: 12px; padding: 3px 9px;">Racing</span>
+            <span style="background: rgba(99, 102, 241, 0.12); color: #4649c9; border-radius: 12px; padding: 3px 9px;">Strategy</span>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 10px; background: #ffffff; border: 3px solid #33251b; border-radius: 16px; padding: 16px; box-shadow: 0 4px 0 #33251b;">
+          <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 8px;">
+            <div style="font-family: 'Lilita One', 'Arial Rounded MT Bold', sans-serif; font-size: 19px; line-height: 1.15;">Just One</div>
+            <svg width="30" height="32" viewBox="0 0 64 68" style="flex-shrink: 0;"><path d="M32 7.5 L39.6 25.1 L58.7 26.7 L44.3 39.4 L48.6 58.1 L32 48.2 L15.4 58.1 L19.7 39.4 L5.3 26.7 L24.4 25.1 Z" fill="#33251b"></path><path d="M32 4 L39.6 21.6 L58.7 23.2 L44.3 35.9 L48.6 54.6 L32 44.7 L15.4 54.6 L19.7 35.9 L5.3 23.2 L24.4 21.6 Z" fill="#17b26b" stroke="#33251b" stroke-width="3" stroke-linejoin="round"></path><text x="32" y="32" text-anchor="middle" dominant-baseline="central" font-family="'Lilita One','Arial Rounded MT Bold',sans-serif" font-size="22" fill="#ffffff">S</text></svg>
+          </div>
+          <div style="font-weight: 700; font-size: 12px; color: #0e8a4f;">instant teach</div>
+          <div style="display: flex; gap: 5px; flex-wrap: wrap;">
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: rgba(143, 195, 44, 0.18); border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #6d9a17;">3 <strong style="font-weight: 800;">A</strong></span>
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: #17b26b; border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #ffffff;">4 <strong style="font-weight: 800;">S</strong></span>
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: rgba(23, 178, 107, 0.16); border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #0e8a4f;">5 <strong style="font-weight: 800;">S</strong></span>
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: rgba(23, 178, 107, 0.16); border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #0e8a4f;">6 <strong style="font-weight: 800;">S</strong></span>
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: rgba(143, 195, 44, 0.18); border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #6d9a17;">7 <strong style="font-weight: 800;">A</strong></span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 6px; font-weight: 800; font-size: 12px; color: #e2504e;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L14.9 8.6 L22 9.3 L16.6 14 L18.2 21 L12 17.3 L5.8 21 L7.4 14 L2 9.3 L9.1 8.6 Z"></path></svg>
+            <span>sweet at 4–6p</span>
+          </div>
+          <div style="display: flex; gap: 5px; flex-wrap: wrap; font-size: 11px; font-weight: 800;">
+            <span style="background: rgba(16, 185, 129, 0.12); color: #0b7d58; border-radius: 12px; padding: 3px 9px;">Cooperative</span>
+            <span style="background: rgba(245, 158, 11, 0.14); color: #b26a00; border-radius: 12px; padding: 3px 9px;">Party</span>
+            <span style="background: rgba(148, 163, 184, 0.18); color: #5d6b7e; border-radius: 12px; padding: 3px 9px;">Filler</span>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 10px; background: #ffffff; border: 3px solid #33251b; border-radius: 16px; padding: 16px; box-shadow: 0 4px 0 #33251b;">
+          <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 8px;">
+            <div style="font-family: 'Lilita One', 'Arial Rounded MT Bold', sans-serif; font-size: 19px; line-height: 1.15;">Scout</div>
+            <svg width="30" height="32" viewBox="0 0 64 68" style="flex-shrink: 0;"><path d="M32 7.5 L39.6 25.1 L58.7 26.7 L44.3 39.4 L48.6 58.1 L32 48.2 L15.4 58.1 L19.7 39.4 L5.3 26.7 L24.4 25.1 Z" fill="#33251b"></path><path d="M32 4 L39.6 21.6 L58.7 23.2 L44.3 35.9 L48.6 54.6 L32 44.7 L15.4 54.6 L19.7 35.9 L5.3 23.2 L24.4 21.6 Z" fill="#17b26b" stroke="#33251b" stroke-width="3" stroke-linejoin="round"></path><text x="32" y="32" text-anchor="middle" dominant-baseline="central" font-family="'Lilita One','Arial Rounded MT Bold',sans-serif" font-size="22" fill="#ffffff">S</text></svg>
+          </div>
+          <div style="font-weight: 700; font-size: 12px; color: #0e8a4f;">instant teach</div>
+          <div style="display: flex; gap: 5px; flex-wrap: wrap;">
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: rgba(143, 195, 44, 0.18); border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #6d9a17;">3 <strong style="font-weight: 800;">A</strong></span>
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: #17b26b; border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #ffffff;">4 <strong style="font-weight: 800;">S</strong></span>
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: rgba(23, 178, 107, 0.16); border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #0e8a4f;">5 <strong style="font-weight: 800;">S</strong></span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 6px; font-weight: 800; font-size: 12px; color: #e2504e;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L14.9 8.6 L22 9.3 L16.6 14 L18.2 21 L12 17.3 L5.8 21 L7.4 14 L2 9.3 L9.1 8.6 Z"></path></svg>
+            <span>sweet at 4–5p</span>
+          </div>
+          <div style="display: flex; gap: 5px; flex-wrap: wrap; font-size: 11px; font-weight: 800;">
+            <span style="background: rgba(148, 163, 184, 0.18); color: #5d6b7e; border-radius: 12px; padding: 3px 9px;">Filler</span>
+            <span style="background: rgba(99, 102, 241, 0.12); color: #4649c9; border-radius: 12px; padding: 3px 9px;">Strategy</span>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 10px; background: #ffffff; border: 3px solid #33251b; border-radius: 16px; padding: 16px; box-shadow: 0 4px 0 #33251b;">
+          <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 8px;">
+            <div style="font-family: 'Lilita One', 'Arial Rounded MT Bold', sans-serif; font-size: 19px; line-height: 1.15;">Sushi Go!</div>
+            <svg width="30" height="32" viewBox="0 0 64 68" style="flex-shrink: 0;"><path d="M32 7.5 L39.6 25.1 L58.7 26.7 L44.3 39.4 L48.6 58.1 L32 48.2 L15.4 58.1 L19.7 39.4 L5.3 26.7 L24.4 25.1 Z" fill="#33251b"></path><path d="M32 4 L39.6 21.6 L58.7 23.2 L44.3 35.9 L48.6 54.6 L32 44.7 L15.4 54.6 L19.7 35.9 L5.3 23.2 L24.4 21.6 Z" fill="#17b26b" stroke="#33251b" stroke-width="3" stroke-linejoin="round"></path><text x="32" y="32" text-anchor="middle" dominant-baseline="central" font-family="'Lilita One','Arial Rounded MT Bold',sans-serif" font-size="22" fill="#ffffff">S</text></svg>
+          </div>
+          <div style="font-weight: 700; font-size: 12px; color: #0e8a4f;">instant teach</div>
+          <div style="display: flex; gap: 5px; flex-wrap: wrap;">
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: rgba(245, 197, 24, 0.2); border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #b28d00;">2 <strong style="font-weight: 800;">B</strong></span>
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: rgba(143, 195, 44, 0.18); border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #6d9a17;">3 <strong style="font-weight: 800;">A</strong></span>
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: #17b26b; border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #ffffff;">4 <strong style="font-weight: 800;">S</strong></span>
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: rgba(23, 178, 107, 0.16); border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #0e8a4f;">5 <strong style="font-weight: 800;">S</strong></span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 6px; font-weight: 800; font-size: 12px; color: #e2504e;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L14.9 8.6 L22 9.3 L16.6 14 L18.2 21 L12 17.3 L5.8 21 L7.4 14 L2 9.3 L9.1 8.6 Z"></path></svg>
+            <span>sweet at 4–5p</span>
+          </div>
+          <div style="display: flex; gap: 5px; flex-wrap: wrap; font-size: 11px; font-weight: 800;">
+            <span style="background: rgba(148, 163, 184, 0.18); color: #5d6b7e; border-radius: 12px; padding: 3px 9px;">Filler</span>
+            <span style="background: rgba(99, 102, 241, 0.12); color: #4649c9; border-radius: 12px; padding: 3px 9px;">Strategy</span>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 10px; background: #ffffff; border: 3px solid #33251b; border-radius: 16px; padding: 16px; box-shadow: 0 4px 0 #33251b;">
+          <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 8px;">
+            <div style="font-family: 'Lilita One', 'Arial Rounded MT Bold', sans-serif; font-size: 19px; line-height: 1.15;">Dune Imperium</div>
+            <svg width="30" height="32" viewBox="0 0 64 68" style="flex-shrink: 0;"><circle cx="32" cy="35" r="26" fill="#33251b"></circle><circle cx="32" cy="32" r="26" fill="#f5c518" stroke="#33251b" stroke-width="3"></circle><text x="32" y="33" text-anchor="middle" dominant-baseline="central" font-family="'Lilita One','Arial Rounded MT Bold',sans-serif" font-size="24" fill="#33251b">B</text></svg>
+          </div>
+          <div style="font-weight: 700; font-size: 12px; color: #b28d00;">~30 minute teach</div>
+          <div style="display: flex; gap: 5px; flex-wrap: wrap;">
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: rgba(143, 195, 44, 0.18); border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #6d9a17;">1 <strong style="font-weight: 800;">A</strong></span>
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: rgba(143, 195, 44, 0.18); border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #6d9a17;">2 <strong style="font-weight: 800;">A</strong></span>
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: rgba(23, 178, 107, 0.16); border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #0e8a4f;">3 <strong style="font-weight: 800;">S</strong></span>
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: #17b26b; border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #ffffff;">4 <strong style="font-weight: 800;">S</strong></span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 6px; font-weight: 800; font-size: 12px; color: #e2504e;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L14.9 8.6 L22 9.3 L16.6 14 L18.2 21 L12 17.3 L5.8 21 L7.4 14 L2 9.3 L9.1 8.6 Z"></path></svg>
+            <span>sweet at 3–4p</span>
+          </div>
+          <div style="display: flex; gap: 5px; flex-wrap: wrap; font-size: 11px; font-weight: 800;">
+            <span style="background: rgba(249, 115, 22, 0.13); color: #c25a10; border-radius: 12px; padding: 3px 9px;">Worker Placement</span>
+            <span style="background: rgba(239, 68, 68, 0.12); color: #c02f2f; border-radius: 12px; padding: 3px 9px;">Deckbuilder</span>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 10px; background: #ffffff; border: 3px solid #33251b; border-radius: 16px; padding: 16px; box-shadow: 0 4px 0 #33251b;">
+          <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 8px;">
+            <div style="font-family: 'Lilita One', 'Arial Rounded MT Bold', sans-serif; font-size: 19px; line-height: 1.15;">Concordia</div>
+            <svg width="30" height="32" viewBox="0 0 64 68" style="flex-shrink: 0;"><circle cx="32" cy="35" r="26" fill="#33251b"></circle><circle cx="32" cy="32" r="26" fill="#f5c518" stroke="#33251b" stroke-width="3"></circle><text x="32" y="33" text-anchor="middle" dominant-baseline="central" font-family="'Lilita One','Arial Rounded MT Bold',sans-serif" font-size="24" fill="#33251b">B</text></svg>
+          </div>
+          <div style="font-weight: 700; font-size: 12px; color: #b28d00;">~30 minute teach</div>
+          <div style="display: flex; gap: 5px; flex-wrap: wrap;">
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: rgba(245, 130, 42, 0.16); border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #cc6414;">2 <strong style="font-weight: 800;">C</strong></span>
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: rgba(245, 197, 24, 0.2); border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #b28d00;">3 <strong style="font-weight: 800;">B</strong></span>
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: #17b26b; border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #ffffff;">4 <strong style="font-weight: 800;">S</strong></span>
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: rgba(23, 178, 107, 0.16); border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #0e8a4f;">5 <strong style="font-weight: 800;">S</strong></span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 6px; font-weight: 800; font-size: 12px; color: #e2504e;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L14.9 8.6 L22 9.3 L16.6 14 L18.2 21 L12 17.3 L5.8 21 L7.4 14 L2 9.3 L9.1 8.6 Z"></path></svg>
+            <span>sweet at 4–5p</span>
+          </div>
+          <div style="display: flex; gap: 5px; flex-wrap: wrap; font-size: 11px; font-weight: 800;">
+            <span style="background: rgba(99, 102, 241, 0.12); color: #4649c9; border-radius: 12px; padding: 3px 9px;">Strategy</span>
+            <span style="background: rgba(6, 182, 212, 0.12); color: #087f96; border-radius: 12px; padding: 3px 9px;">Engine Builder</span>
+          </div>
+        </div>
+
+      </div>
+      <div style="height: 12px; background: #17b26b; border: 3px solid #33251b; border-radius: 8px; box-shadow: 0 4px 0 rgba(51, 37, 27, 0.25);"></div>
+    </div>
+
+    <div style="background: rgba(143, 195, 44, 0.12); padding: 22px 48px 24px; display: flex; flex-direction: column; gap: 16px;">
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <svg width="54" height="58" viewBox="0 0 64 68"><path d="M32 7.5 L56 21.5 L56 49.5 L32 63.5 L8 49.5 L8 21.5 Z" fill="#33251b"></path><path d="M32 4 L56 18 L56 46 L32 60 L8 46 L8 18 Z" fill="#8fc32c" stroke="#33251b" stroke-width="3" stroke-linejoin="round"></path><text x="32" y="33" text-anchor="middle" dominant-baseline="central" font-family="'Lilita One','Arial Rounded MT Bold',sans-serif" font-size="24" fill="#ffffff">A</text></svg>
+        <div style="display: flex; flex-direction: column; gap: 1px;">
+          <div style="font-family: 'Lilita One', 'Arial Rounded MT Bold', sans-serif; font-size: 26px;">The A shelf</div>
+          <div style="font-weight: 800; font-size: 13px; color: #6d9a17;">30 games play very well with 4 players</div>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px;">
+
+        <div style="display: flex; flex-direction: column; gap: 10px; background: #ffffff; border: 3px solid #33251b; border-radius: 16px; padding: 16px; box-shadow: 0 4px 0 #33251b;">
+          <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 8px;">
+            <div style="font-family: 'Lilita One', 'Arial Rounded MT Bold', sans-serif; font-size: 19px; line-height: 1.15;">Carcassonne Big Box</div>
+            <svg width="30" height="32" viewBox="0 0 64 68" style="flex-shrink: 0;"><path d="M32 7.5 L39.6 25.1 L58.7 26.7 L44.3 39.4 L48.6 58.1 L32 48.2 L15.4 58.1 L19.7 39.4 L5.3 26.7 L24.4 25.1 Z" fill="#33251b"></path><path d="M32 4 L39.6 21.6 L58.7 23.2 L44.3 35.9 L48.6 54.6 L32 44.7 L15.4 54.6 L19.7 35.9 L5.3 23.2 L24.4 21.6 Z" fill="#17b26b" stroke="#33251b" stroke-width="3" stroke-linejoin="round"></path><text x="32" y="32" text-anchor="middle" dominant-baseline="central" font-family="'Lilita One','Arial Rounded MT Bold',sans-serif" font-size="22" fill="#ffffff">S</text></svg>
+          </div>
+          <div style="font-weight: 700; font-size: 12px; color: #0e8a4f;">instant teach</div>
+          <div style="display: flex; gap: 5px; flex-wrap: wrap;">
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: rgba(23, 178, 107, 0.16); border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #0e8a4f;">2 <strong style="font-weight: 800;">S</strong></span>
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: rgba(23, 178, 107, 0.16); border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #0e8a4f;">3 <strong style="font-weight: 800;">S</strong></span>
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: #8fc32c; border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #ffffff;">4 <strong style="font-weight: 800;">A</strong></span>
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: rgba(245, 130, 42, 0.16); border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #cc6414;">5 <strong style="font-weight: 800;">C</strong></span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 6px; font-weight: 800; font-size: 12px; color: #e2504e;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L14.9 8.6 L22 9.3 L16.6 14 L18.2 21 L12 17.3 L5.8 21 L7.4 14 L2 9.3 L9.1 8.6 Z"></path></svg>
+            <span>sweet at 2–3p</span>
+          </div>
+          <div style="display: flex; gap: 5px; flex-wrap: wrap; font-size: 11px; font-weight: 800;">
+            <span style="background: rgba(99, 102, 241, 0.12); color: #4649c9; border-radius: 12px; padding: 3px 9px;">Strategy</span>
+            <span style="background: rgba(148, 163, 184, 0.18); color: #5d6b7e; border-radius: 12px; padding: 3px 9px;">Filler</span>
+            <span style="background: rgba(34, 197, 94, 0.14); color: #15803c; border-radius: 12px; padding: 3px 9px;">Chill</span>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 10px; background: #ffffff; border: 3px solid #33251b; border-radius: 16px; padding: 16px; box-shadow: 0 4px 0 #33251b;">
+          <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 8px;">
+            <div style="font-family: 'Lilita One', 'Arial Rounded MT Bold', sans-serif; font-size: 19px; line-height: 1.15;">Codenames</div>
+            <svg width="30" height="32" viewBox="0 0 64 68" style="flex-shrink: 0;"><path d="M32 7.5 L39.6 25.1 L58.7 26.7 L44.3 39.4 L48.6 58.1 L32 48.2 L15.4 58.1 L19.7 39.4 L5.3 26.7 L24.4 25.1 Z" fill="#33251b"></path><path d="M32 4 L39.6 21.6 L58.7 23.2 L44.3 35.9 L48.6 54.6 L32 44.7 L15.4 54.6 L19.7 35.9 L5.3 23.2 L24.4 21.6 Z" fill="#17b26b" stroke="#33251b" stroke-width="3" stroke-linejoin="round"></path><text x="32" y="32" text-anchor="middle" dominant-baseline="central" font-family="'Lilita One','Arial Rounded MT Bold',sans-serif" font-size="22" fill="#ffffff">S</text></svg>
+          </div>
+          <div style="font-weight: 700; font-size: 12px; color: #0e8a4f;">instant teach</div>
+          <div style="display: flex; gap: 5px; flex-wrap: wrap;">
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: rgba(245, 130, 42, 0.16); border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #cc6414;">2 <strong style="font-weight: 800;">C</strong></span>
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: #8fc32c; border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #ffffff;">4 <strong style="font-weight: 800;">A</strong></span>
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: rgba(23, 178, 107, 0.16); border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #0e8a4f;">6 <strong style="font-weight: 800;">S</strong></span>
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: rgba(23, 178, 107, 0.16); border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #0e8a4f;">8 <strong style="font-weight: 800;">S</strong></span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 6px; font-weight: 800; font-size: 12px; color: #e2504e;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L14.9 8.6 L22 9.3 L16.6 14 L18.2 21 L12 17.3 L5.8 21 L7.4 14 L2 9.3 L9.1 8.6 Z"></path></svg>
+            <span>sweet at 6–8p</span>
+          </div>
+          <div style="display: flex; gap: 5px; flex-wrap: wrap; font-size: 11px; font-weight: 800;">
+            <span style="background: rgba(245, 158, 11, 0.14); color: #b26a00; border-radius: 12px; padding: 3px 9px;">Party</span>
+            <span style="background: rgba(16, 185, 129, 0.12); color: #0b7d58; border-radius: 12px; padding: 3px 9px;">Cooperative</span>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 10px; background: #ffffff; border: 3px solid #33251b; border-radius: 16px; padding: 16px; box-shadow: 0 4px 0 #33251b;">
+          <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 8px;">
+            <div style="font-family: 'Lilita One', 'Arial Rounded MT Bold', sans-serif; font-size: 19px; line-height: 1.15;">Dominion Big Box</div>
+            <svg width="30" height="32" viewBox="0 0 64 68" style="flex-shrink: 0;"><path d="M32 7.5 L56 21.5 L56 49.5 L32 63.5 L8 49.5 L8 21.5 Z" fill="#33251b"></path><path d="M32 4 L56 18 L56 46 L32 60 L8 46 L8 18 Z" fill="#8fc32c" stroke="#33251b" stroke-width="3" stroke-linejoin="round"></path><text x="32" y="33" text-anchor="middle" dominant-baseline="central" font-family="'Lilita One','Arial Rounded MT Bold',sans-serif" font-size="24" fill="#ffffff">A</text></svg>
+          </div>
+          <div style="font-weight: 700; font-size: 12px; color: #6d9a17;">~10 minute teach</div>
+          <div style="display: flex; gap: 5px; flex-wrap: wrap;">
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: rgba(143, 195, 44, 0.18); border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #6d9a17;">2 <strong style="font-weight: 800;">A</strong></span>
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: rgba(23, 178, 107, 0.16); border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #0e8a4f;">3 <strong style="font-weight: 800;">S</strong></span>
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: #8fc32c; border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #ffffff;">4 <strong style="font-weight: 800;">A</strong></span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 6px; font-weight: 800; font-size: 12px; color: #e2504e;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L14.9 8.6 L22 9.3 L16.6 14 L18.2 21 L12 17.3 L5.8 21 L7.4 14 L2 9.3 L9.1 8.6 Z"></path></svg>
+            <span>sweet at 3p</span>
+          </div>
+          <div style="display: flex; gap: 5px; flex-wrap: wrap; font-size: 11px; font-weight: 800;">
+            <span style="background: rgba(239, 68, 68, 0.12); color: #c02f2f; border-radius: 12px; padding: 3px 9px;">Deckbuilder</span>
+            <span style="background: rgba(99, 102, 241, 0.12); color: #4649c9; border-radius: 12px; padding: 3px 9px;">Strategy</span>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 10px; background: #ffffff; border: 3px solid #33251b; border-radius: 16px; padding: 16px; box-shadow: 0 4px 0 #33251b;">
+          <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 8px;">
+            <div style="font-family: 'Lilita One', 'Arial Rounded MT Bold', sans-serif; font-size: 19px; line-height: 1.15;">Everdell</div>
+            <svg width="30" height="32" viewBox="0 0 64 68" style="flex-shrink: 0;"><circle cx="32" cy="35" r="26" fill="#33251b"></circle><circle cx="32" cy="32" r="26" fill="#f5c518" stroke="#33251b" stroke-width="3"></circle><text x="32" y="33" text-anchor="middle" dominant-baseline="central" font-family="'Lilita One','Arial Rounded MT Bold',sans-serif" font-size="24" fill="#33251b">B</text></svg>
+          </div>
+          <div style="font-weight: 700; font-size: 12px; color: #b28d00;">~30 minute teach</div>
+          <div style="display: flex; gap: 5px; flex-wrap: wrap;">
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: rgba(143, 195, 44, 0.18); border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #6d9a17;">1 <strong style="font-weight: 800;">A</strong></span>
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: rgba(23, 178, 107, 0.16); border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #0e8a4f;">2 <strong style="font-weight: 800;">S</strong></span>
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: rgba(23, 178, 107, 0.16); border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #0e8a4f;">3 <strong style="font-weight: 800;">S</strong></span>
+            <span style="display: inline-flex; align-items: center; gap: 3px; background: #8fc32c; border-radius: 10px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #ffffff;">4 <strong style="font-weight: 800;">A</strong></span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 6px; font-weight: 800; font-size: 12px; color: #e2504e;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L14.9 8.6 L22 9.3 L16.6 14 L18.2 21 L12 17.3 L5.8 21 L7.4 14 L2 9.3 L9.1 8.6 Z"></path></svg>
+            <span>sweet at 2–3p</span>
+          </div>
+          <div style="display: flex; gap: 5px; flex-wrap: wrap; font-size: 11px; font-weight: 800;">
+            <span style="background: rgba(249, 115, 22, 0.13); color: #c25a10; border-radius: 12px; padding: 3px 9px;">Worker Placement</span>
+            <span style="background: rgba(6, 182, 212, 0.12); color: #087f96; border-radius: 12px; padding: 3px 9px;">Engine Builder</span>
+          </div>
+        </div>
+
+      </div>
+      <div style="height: 12px; background: #8fc32c; border: 3px solid #33251b; border-radius: 8px; box-shadow: 0 4px 0 rgba(51, 37, 27, 0.25);"></div>
+    </div>
+
+  </div>
+
+  <div style="position: absolute; left: 0; right: 0; bottom: 0; height: 110px; background: linear-gradient(180deg, rgba(253, 248, 238, 0), #fdf8ee 82%); pointer-events: none;"></div>
+</div>
+</x-dc>
+<script data-dc-script data-props='{"$preview": {"width": 1440, "height": 1340}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

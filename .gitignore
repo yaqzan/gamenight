@@ -1,0 +1,13 @@
+node_modules/
+frontend/dist/
+frontend/public/images/
+.research/
+__pycache__/
+*.pyc
+ops/windows/logs/
+design/gamenight-compass-redesign.html
+
+# Your own data and machine config - never committed (see README "Your data")
+data/
+ops/cloudflared-config.yml
+*.local

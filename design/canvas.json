@@ -1,0 +1,15 @@
+{
+  "artboards": [
+    { "file": "Final.dc.html", "x": 0, "y": 0, "w": 1440, "h": 1340, "title": "Design A · list view" },
+    { "file": "Main.dc.html", "x": 1580, "y": 0, "w": 1440, "h": 1340, "title": "Design A · card view" },
+    { "file": "Scoreboard.dc.html", "x": 0, "y": 1520, "w": 1440, "h": 1340, "title": "Design C · list view" },
+    { "file": "ScoreboardCards.dc.html", "x": 1580, "y": 1520, "w": 1440, "h": 1340, "title": "Design C · card view" },
+    { "file": "FinalMobile.dc.html", "x": 3160, "y": 0, "w": 390, "h": 920, "title": "Design A · list — mobile" },
+    { "file": "StampGradient.dc.html", "x": 0, "y": 3040, "w": 1440, "h": 1270, "title": "Badge gradient — S variants" }
+  ],
+  "annotations": [
+    { "id": "brief", "x": -560, "y": 0, "w": 480, "text": "GAME NIGHT COMPASS — DECIDED BOARD\n\nThe four keeper layouts, all wearing the decided system:\n· QUALITY (per player count) = filled gradient badges and letters, continuous red-to-green, provisionally Variant 1 (deepest-green S).\n· TEACH TIME = backdrop wash on each row/card, a hint of green when simple warming to red when heavy. No letter badges for difficulty anymore.\n\nTop row: Design A (paper) as list and cards. Bottom row: Design C (dark) as list and cards. Mobile comp right; badge-gradient decision board below." },
+    { "id": "gradient-note", "x": 1500, "y": 3040, "w": 400, "text": "STILL OPEN: the S badge color.\nVariant 1 (continuous ramp, deepest-green S) is what all four boards wear now. Variant 2 breaks S out — ink, teal, or brass. When you want to see a swap, say so and I restamp the boards in place — no separate canvases per variant." }
+  ],
+  "launch": { "view": "canvas" }
+}

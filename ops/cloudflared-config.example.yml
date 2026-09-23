@@ -1,0 +1,16 @@
+# Optional: publish GameNight through a Cloudflare tunnel.
+# Copy to ops/cloudflared-config.yml (gitignored) and fill in your own tunnel:
+#   cloudflared tunnel create gamenight
+#   cloudflared tunnel route dns gamenight games.example.com
+#
+# One hostname is enough: the Python server serves the built SPA and
+# /api/health on the same port. The app is read-only with no input surface.
+#
+# Run: cloudflared tunnel --config ops/cloudflared-config.yml run gamenight
+tunnel: <tunnel-uuid>
+credentials-file: <path-to-your-.cloudflared>/<tunnel-uuid>.json
+
+ingress:
+  - hostname: games.example.com
+    service: http://127.0.0.1:5004
+  - service: http_status:404

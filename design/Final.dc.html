@@ -1,0 +1,497 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500;600;700;900&amp;family=Courier+Prime:wght@400;700&amp;display=swap">
+  <style>
+    body { margin: 0; background: #f6efdf; }
+    a { color: #c33d22; }
+    a:hover { color: #9e2f18; }
+  </style>
+</helmet>
+<div style="position: relative; width: 1440px; height: 1340px; overflow: hidden; background-color: #f6efdf; background-image: repeating-linear-gradient(180deg, rgba(120, 100, 60, 0) 0px, rgba(120, 100, 60, 0) 35px, rgba(120, 100, 60, 0.06) 35px, rgba(120, 100, 60, 0.06) 36px); color: #241d12; font-family: 'Libre Franklin', 'Franklin Gothic Medium', 'Segoe UI', sans-serif;">
+
+  <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 16px 44px; border-bottom: 2px solid #241d12;">
+    <div style="display: flex; align-items: center; gap: 13px;">
+      <svg width="34" height="34" viewBox="0 0 64 64"><circle cx="32" cy="32" r="26" fill="none" stroke="#241d12" stroke-width="2.5" stroke-dasharray="2 7" stroke-linecap="round"></circle><g transform="rotate(45 32 32)"><rect x="18" y="18" width="28" height="28" rx="6" fill="#c33d22"></rect><g fill="#f6efdf"><circle cx="25" cy="25" r="2.6"></circle><circle cx="39" cy="25" r="2.6"></circle><circle cx="32" cy="32" r="2.6"></circle><circle cx="25" cy="39" r="2.6"></circle><circle cx="39" cy="39" r="2.6"></circle></g></g></svg>
+      <div style="font-weight: 900; font-size: 21px; letter-spacing: 2.5px; text-transform: uppercase;">Game Night Compass</div>
+    </div>
+    <div style="display: flex; align-items: center; gap: 18px;">
+      <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 12px; color: #8d8069; letter-spacing: 1px;">96 GAMES · 78 PLAY AT 4</div>
+      <div style="display: flex; align-items: center; gap: 9px; background: #c33d22; color: #fdfaf1; padding: 11px 20px; border-radius: 4px; font-weight: 800; font-size: 13px; letter-spacing: 1.8px; text-transform: uppercase; box-shadow: 3px 3px 0 rgba(36, 29, 18, 0.22);">
+        <svg width="16" height="16" viewBox="0 0 24 24"><rect x="2.5" y="2.5" width="19" height="19" rx="4.5" fill="none" stroke="currentColor" stroke-width="2"></rect><circle cx="8" cy="8" r="1.8" fill="currentColor"></circle><circle cx="16" cy="8" r="1.8" fill="currentColor"></circle><circle cx="12" cy="12" r="1.8" fill="currentColor"></circle><circle cx="8" cy="16" r="1.8" fill="currentColor"></circle><circle cx="16" cy="16" r="1.8" fill="currentColor"></circle></svg>
+        <span>Roll the dice</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 30px; padding: 26px 44px 18px; flex-wrap: wrap;">
+    <div style="display: flex; flex-direction: column; gap: 6px;">
+      <div style="font-weight: 900; font-size: 42px; line-height: 1.02; letter-spacing: -0.5px;">Which game tonight?</div>
+      <div style="font-size: 15px; font-weight: 500; color: #5c5140; line-height: 1.5;">The whole shelf, tiered by how each game actually plays at every player count.</div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 7px;">
+      <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; letter-spacing: 2.5px; color: #8d8069;">PLAYERS AT THE TABLE</div>
+      <div style="display: flex; border: 1.5px solid #b3a68b; border-radius: 6px; overflow: hidden; background: #fdfaf1;">
+        <div style="display: flex; align-items: center; justify-content: center; min-width: 54px; height: 44px; font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #8d8069; border-right: 1px solid #e4dabf;">Any</div>
+        <div style="display: flex; align-items: center; justify-content: center; min-width: 44px; height: 44px; font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #8d8069; border-right: 1px solid #e4dabf;">1</div>
+        <div style="display: flex; align-items: center; justify-content: center; min-width: 44px; height: 44px; font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #8d8069; border-right: 1px solid #e4dabf;">2</div>
+        <div style="display: flex; align-items: center; justify-content: center; min-width: 44px; height: 44px; font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #8d8069; border-right: 1px solid #e4dabf;">3</div>
+        <div style="display: flex; align-items: center; justify-content: center; min-width: 44px; height: 44px; font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 16px; color: #fdfaf1; background: #c33d22; border-right: 1px solid #e4dabf;">4</div>
+        <div style="display: flex; align-items: center; justify-content: center; min-width: 44px; height: 44px; font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #8d8069; border-right: 1px solid #e4dabf;">5</div>
+        <div style="display: flex; align-items: center; justify-content: center; min-width: 44px; height: 44px; font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #8d8069; border-right: 1px solid #e4dabf;">6</div>
+        <div style="display: flex; align-items: center; justify-content: center; min-width: 44px; height: 44px; font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #8d8069; border-right: 1px solid #e4dabf;">7</div>
+        <div style="display: flex; align-items: center; justify-content: center; min-width: 44px; height: 44px; font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #8d8069; border-right: 1px solid #e4dabf;">8</div>
+        <div style="display: flex; align-items: center; justify-content: center; min-width: 44px; height: 44px; font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #8d8069; border-right: 1px solid #e4dabf;">9</div>
+        <div style="display: flex; align-items: center; justify-content: center; min-width: 44px; height: 44px; font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #8d8069; border-right: 1px solid #e4dabf;">10</div>
+        <div style="display: flex; align-items: center; justify-content: center; min-width: 44px; height: 44px; font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #8d8069;">12</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: center; gap: 12px; padding: 0 44px 14px; flex-wrap: wrap;">
+    <div style="display: flex; align-items: center; gap: 8px; border-bottom: 1.5px solid #b3a68b; padding: 8px 4px; width: 240px; color: #8d8069;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"></circle><line x1="15.5" y1="15.5" x2="20.5" y2="20.5"></line></svg>
+      <span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 12px;">search the shelf…</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 7px; flex-wrap: wrap; font-family: 'Courier Prime', 'Courier New', monospace; font-size: 12px; color: #5c5140;">
+      <span style="border: 1px solid #b3a68b; border-radius: 3px; padding: 6px 10px;">[ strategy ]</span>
+      <span style="border: 1px solid #b3a68b; border-radius: 3px; padding: 6px 10px;">[ party ]</span>
+      <span style="border: 1px solid #b3a68b; border-radius: 3px; padding: 6px 10px;">[ cooperative ]</span>
+      <span style="border: 1px solid #b3a68b; border-radius: 3px; padding: 6px 10px;">[ duel ]</span>
+      <span style="border: 1px solid #b3a68b; border-radius: 3px; padding: 6px 10px;">[ filler ]</span>
+      <span style="border: 1px solid #b3a68b; border-radius: 3px; padding: 6px 10px;">[ chill ]</span>
+      <span style="color: #8d8069; padding: 6px 4px;">+ 10 more</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 8px; font-family: 'Courier Prime', 'Courier New', monospace; font-size: 12px; color: #5c5140; border: 1px dashed #b3a68b; border-radius: 3px; padding: 6px 12px; margin-left: auto;">
+      <span style="color: #8d8069;">teach gate:</span>
+      <span style="display: inline-flex; gap: 2px;"><span style="display: inline-block; width: 9px; height: 12px; border-radius: 2px; background: rgba(31, 143, 82, 0.25);"></span><span style="display: inline-block; width: 9px; height: 12px; border-radius: 2px; background: rgba(120, 158, 40, 0.25);"></span><span style="display: inline-block; width: 9px; height: 12px; border-radius: 2px; background: rgba(196, 158, 20, 0.3);"></span><span style="display: inline-block; width: 9px; height: 12px; border-radius: 2px; background: rgba(207, 113, 31, 0.32);"></span><span style="display: inline-block; width: 9px; height: 12px; border-radius: 2px; background: rgba(199, 64, 38, 0.35);"></span><span style="display: inline-block; width: 9px; height: 12px; border-radius: 2px; background: rgba(178, 42, 32, 0.4);"></span></span>
+      <span style="font-weight: 700;">up to very heavy</span>
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: center; gap: 14px; padding: 9px 44px; border-top: 1px dashed #cfc3a5; border-bottom: 1px dashed #cfc3a5; background: #fbf6ea;">
+    <span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; letter-spacing: 2px; color: #8d8069;">TEACH TIME · ROW TINT</span>
+    <div style="display: flex; align-items: center; gap: 5px;"><span style="display: inline-block; width: 26px; height: 14px; border-radius: 3px; background: rgba(31, 143, 82, 0.1); border: 1px solid #e4dabf;"></span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 11px; color: #5c5140;">instant</span></div>
+    <div style="display: flex; align-items: center; gap: 5px;"><span style="display: inline-block; width: 26px; height: 14px; border-radius: 3px; background: rgba(120, 158, 40, 0.1); border: 1px solid #e4dabf;"></span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 11px; color: #5c5140;">~10 min</span></div>
+    <div style="display: flex; align-items: center; gap: 5px;"><span style="display: inline-block; width: 26px; height: 14px; border-radius: 3px; background: rgba(196, 158, 20, 0.12); border: 1px solid #e4dabf;"></span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 11px; color: #5c5140;">~30 min</span></div>
+    <div style="display: flex; align-items: center; gap: 5px;"><span style="display: inline-block; width: 26px; height: 14px; border-radius: 3px; background: rgba(207, 113, 31, 0.13); border: 1px solid #e4dabf;"></span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 11px; color: #5c5140;">experienced</span></div>
+    <div style="display: flex; align-items: center; gap: 5px;"><span style="display: inline-block; width: 26px; height: 14px; border-radius: 3px; background: rgba(199, 64, 38, 0.15); border: 1px solid #e4dabf;"></span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 11px; color: #5c5140;">heavy rulebook</span></div>
+    <div style="display: flex; align-items: center; gap: 5px;"><span style="display: inline-block; width: 26px; height: 14px; border-radius: 3px; background: rgba(178, 42, 32, 0.2); border: 1px solid #e4dabf;"></span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 11px; color: #5c5140;">very heavy</span></div>
+    <span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #8d8069; margin-left: auto;">click a row for its table notes</span>
+  </div>
+
+  <div style="display: flex; gap: 22px; padding: 22px 44px 0;">
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; width: 92px; flex-shrink: 0; padding-top: 34px;">
+      <svg width="64" height="64" viewBox="0 0 64 64" style="transform: rotate(-5deg);"><circle cx="32" cy="32" r="29" fill="#155f38"></circle><text x="32" y="34" text-anchor="middle" dominant-baseline="central" font-family="'Courier Prime','Courier New',monospace" font-weight="700" font-size="27" fill="#f6efdf">S</text></svg>
+      <div style="font-weight: 900; font-size: 14px; letter-spacing: 1.5px; color: #155f38; text-transform: uppercase; text-align: center; line-height: 1.3;">Great<br>at 4</div>
+      <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">30 GAMES</div>
+      <div style="flex-grow: 1; width: 3px; background: #155f38; border-radius: 2px; opacity: 0.55;"></div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; flex-grow: 1;">
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) 150px 296px 90px 220px; gap: 14px; align-items: center; padding: 0 14px 8px; font-family: 'Courier Prime', 'Courier New', monospace; font-size: 9px; letter-spacing: 1.5px; color: #8d8069;">
+        <span>GAME</span>
+        <span>TEACH</span>
+        <div style="display: flex; gap: 4px;"><span style="display: flex; justify-content: center; width: 28px;">1</span><span style="display: flex; justify-content: center; width: 28px;">2</span><span style="display: flex; justify-content: center; width: 28px;">3</span><span style="display: flex; justify-content: center; width: 28px; color: #c33d22; font-weight: 700;">4</span><span style="display: flex; justify-content: center; width: 28px;">5</span><span style="display: flex; justify-content: center; width: 28px;">6</span><span style="display: flex; justify-content: center; width: 28px;">7</span><span style="display: flex; justify-content: center; width: 28px;">8</span></div>
+        <span>SWEET</span>
+        <span>VIBES</span>
+      </div>
+
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) 150px 296px 90px 220px; gap: 14px; align-items: center; padding: 10px 14px; border-top: 1px solid #e4dabf; background: rgba(31, 143, 82, 0.1);">
+        <div style="font-weight: 700; font-size: 16.5px;">Bomb Busters</div>
+        <div style="display: flex; align-items: center; gap: 7px;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">instant</span></div>
+        <div style="display: flex; gap: 4px; font-family: 'Courier Prime', 'Courier New', monospace; font-size: 13px; font-weight: 700;">
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #a1780a;">C</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #6c8f21;">B</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #155f38; background: rgba(195, 61, 34, 0.08); border-radius: 4px;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #155f38;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+        </div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 11px; color: #c33d22;">4–5p</div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">cooperative · puzzle · party</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) 150px 296px 90px 220px; gap: 14px; align-items: center; padding: 10px 14px; border-top: 1px solid #e4dabf; background: rgba(31, 143, 82, 0.1);">
+        <div style="font-weight: 700; font-size: 16.5px;">Just One</div>
+        <div style="display: flex; align-items: center; gap: 7px;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">instant</span></div>
+        <div style="display: flex; gap: 4px; font-family: 'Courier Prime', 'Courier New', monospace; font-size: 13px; font-weight: 700;">
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #47821f;">A</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #155f38; background: rgba(195, 61, 34, 0.08); border-radius: 4px;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #155f38;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #155f38;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #47821f;">A</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+        </div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 11px; color: #c33d22;">4–6p</div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">cooperative · party · filler</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) 150px 296px 90px 220px; gap: 14px; align-items: center; padding: 10px 14px; border-top: 1px solid #e4dabf; background: rgba(31, 143, 82, 0.1);">
+        <div style="font-weight: 700; font-size: 16.5px;">Scout</div>
+        <div style="display: flex; align-items: center; gap: 7px;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">instant</span></div>
+        <div style="display: flex; gap: 4px; font-family: 'Courier Prime', 'Courier New', monospace; font-size: 13px; font-weight: 700;">
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #47821f;">A</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #155f38; background: rgba(195, 61, 34, 0.08); border-radius: 4px;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #155f38;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+        </div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 11px; color: #c33d22;">4–5p</div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">filler · strategy</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) 150px 296px 90px 220px; gap: 14px; align-items: center; padding: 10px 14px; border-top: 1px solid #e4dabf; background: rgba(31, 143, 82, 0.1);">
+        <div style="font-weight: 700; font-size: 16.5px;">Sushi Go!</div>
+        <div style="display: flex; align-items: center; gap: 7px;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">instant</span></div>
+        <div style="display: flex; gap: 4px; font-family: 'Courier Prime', 'Courier New', monospace; font-size: 13px; font-weight: 700;">
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #6c8f21;">B</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #47821f;">A</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #155f38; background: rgba(195, 61, 34, 0.08); border-radius: 4px;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #155f38;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+        </div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 11px; color: #c33d22;">4–5p</div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">filler · strategy</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) 150px 296px 90px 220px; gap: 14px; align-items: center; padding: 10px 14px; border-top: 1px solid #e4dabf; background: rgba(120, 158, 40, 0.1);">
+        <div style="font-weight: 700; font-size: 16.5px;">Heat: Pedal to the Metal</div>
+        <div style="display: flex; align-items: center; gap: 7px;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">~10 min</span></div>
+        <div style="display: flex; gap: 4px; font-family: 'Courier Prime', 'Courier New', monospace; font-size: 13px; font-weight: 700;">
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #6c8f21;">B</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #6c8f21;">B</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #47821f;">A</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #155f38; background: rgba(195, 61, 34, 0.08); border-radius: 4px;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #155f38;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #155f38;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+        </div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 11px; color: #c33d22;">4–6p</div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">racing · strategy · solo</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) 150px 296px 90px 220px; gap: 14px; align-items: center; padding: 10px 14px; border-top: 1px solid #e4dabf; background: rgba(196, 158, 20, 0.12);">
+        <div style="font-weight: 700; font-size: 16.5px;">Concordia</div>
+        <div style="display: flex; align-items: center; gap: 7px;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">~30 min</span></div>
+        <div style="display: flex; gap: 4px; font-family: 'Courier Prime', 'Courier New', monospace; font-size: 13px; font-weight: 700;">
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #a1780a;">C</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #6c8f21;">B</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #155f38; background: rgba(195, 61, 34, 0.08); border-radius: 4px;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #155f38;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+        </div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 11px; color: #c33d22;">4–5p</div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">strategy · engine builder</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) 150px 296px 90px 220px; gap: 14px; align-items: center; padding: 10px 14px; border-top: 1px solid #e4dabf; background: rgba(196, 158, 20, 0.12);">
+        <div style="font-weight: 700; font-size: 16.5px;">Dune Imperium</div>
+        <div style="display: flex; align-items: center; gap: 7px;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">~30 min</span></div>
+        <div style="display: flex; gap: 4px; font-family: 'Courier Prime', 'Courier New', monospace; font-size: 13px; font-weight: 700;">
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #47821f;">A</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #47821f;">A</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #155f38;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #155f38; background: rgba(195, 61, 34, 0.08); border-radius: 4px;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+        </div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 11px; color: #c33d22;">3–4p</div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">worker placement · deckbuilder</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) 150px 296px 90px 220px; gap: 14px; align-items: center; padding: 10px 14px; border-top: 1px solid #e4dabf; background: rgba(196, 158, 20, 0.12);">
+        <div style="font-weight: 700; font-size: 16.5px;">Ra — Sun God Edition</div>
+        <div style="display: flex; align-items: center; gap: 7px;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">~30 min</span></div>
+        <div style="display: flex; gap: 4px; font-family: 'Courier Prime', 'Courier New', monospace; font-size: 13px; font-weight: 700;">
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #6c8f21;">B</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #155f38;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #155f38; background: rgba(195, 61, 34, 0.08); border-radius: 4px;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #47821f;">A</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+        </div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 11px; color: #c33d22;">3–4p</div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">auction · strategy</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) 150px 296px 90px 220px; gap: 14px; align-items: center; padding: 10px 14px; border-top: 1px solid #e4dabf; background: rgba(207, 113, 31, 0.13);">
+        <div style="font-weight: 700; font-size: 16.5px;">Brass: Birmingham</div>
+        <div style="display: flex; align-items: center; gap: 7px;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">experienced</span></div>
+        <div style="display: flex; gap: 4px; font-family: 'Courier Prime', 'Courier New', monospace; font-size: 13px; font-weight: 700;">
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #47821f;">A</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #155f38;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #155f38; background: rgba(195, 61, 34, 0.08); border-radius: 4px;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+        </div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 11px; color: #c33d22;">3–4p</div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">strategy · engine builder</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) 150px 296px 90px 220px; gap: 14px; align-items: center; padding: 10px 14px; border-top: 1px solid #e4dabf; background: rgba(207, 113, 31, 0.13);">
+        <div style="font-weight: 700; font-size: 16.5px;">Scythe (Base Game)</div>
+        <div style="display: flex; align-items: center; gap: 7px;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">experienced</span></div>
+        <div style="display: flex; gap: 4px; font-family: 'Courier Prime', 'Courier New', monospace; font-size: 13px; font-weight: 700;">
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #47821f;">A</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #47821f;">A</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #155f38;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #155f38; background: rgba(195, 61, 34, 0.08); border-radius: 4px;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #6c8f21;">B</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+        </div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 11px; color: #c33d22;">3–4p</div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">strategy · engine builder</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; gap: 22px; padding: 26px 44px 0;">
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; width: 92px; flex-shrink: 0; padding-top: 34px;">
+      <svg width="64" height="64" viewBox="0 0 64 64" style="transform: rotate(4deg);"><circle cx="32" cy="32" r="29" fill="#47821f"></circle><text x="32" y="34" text-anchor="middle" dominant-baseline="central" font-family="'Courier Prime','Courier New',monospace" font-weight="700" font-size="27" fill="#f6efdf">A</text></svg>
+      <div style="font-weight: 900; font-size: 14px; letter-spacing: 1.5px; color: #47821f; text-transform: uppercase; text-align: center; line-height: 1.3;">Very good<br>at 4</div>
+      <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">30 GAMES</div>
+      <div style="flex-grow: 1; width: 3px; background: #47821f; border-radius: 2px; opacity: 0.5;"></div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; flex-grow: 1;">
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) 150px 296px 90px 220px; gap: 14px; align-items: center; padding: 0 14px 8px; font-family: 'Courier Prime', 'Courier New', monospace; font-size: 9px; letter-spacing: 1.5px; color: #8d8069;">
+        <span>GAME</span>
+        <span>TEACH</span>
+        <div style="display: flex; gap: 4px;"><span style="display: flex; justify-content: center; width: 28px;">1</span><span style="display: flex; justify-content: center; width: 28px;">2</span><span style="display: flex; justify-content: center; width: 28px;">3</span><span style="display: flex; justify-content: center; width: 28px; color: #c33d22; font-weight: 700;">4</span><span style="display: flex; justify-content: center; width: 28px;">5</span><span style="display: flex; justify-content: center; width: 28px;">6</span><span style="display: flex; justify-content: center; width: 28px;">7</span><span style="display: flex; justify-content: center; width: 28px;">8</span></div>
+        <span>SWEET</span>
+        <span>VIBES</span>
+      </div>
+
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) 150px 296px 90px 220px; gap: 14px; align-items: center; padding: 10px 14px; border-top: 1px solid #e4dabf; background: rgba(31, 143, 82, 0.1);">
+        <div style="font-weight: 700; font-size: 16.5px;">Carcassonne Big Box</div>
+        <div style="display: flex; align-items: center; gap: 7px;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">instant</span></div>
+        <div style="display: flex; gap: 4px; font-family: 'Courier Prime', 'Courier New', monospace; font-size: 13px; font-weight: 700;">
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #155f38;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #155f38;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #47821f; background: rgba(195, 61, 34, 0.08); border-radius: 4px;">A</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #a1780a;">C</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+        </div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 11px; color: #c33d22;">2–3p</div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">strategy · filler · chill</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) 150px 296px 90px 220px; gap: 14px; align-items: center; padding: 10px 14px; border-top: 1px solid #e4dabf; background: rgba(31, 143, 82, 0.1);">
+        <div style="font-weight: 700; font-size: 16.5px;">Codenames</div>
+        <div style="display: flex; align-items: center; gap: 7px;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">instant</span></div>
+        <div style="display: flex; gap: 4px; font-family: 'Courier Prime', 'Courier New', monospace; font-size: 13px; font-weight: 700;">
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #a1780a;">C</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #47821f; background: rgba(195, 61, 34, 0.08); border-radius: 4px;">A</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #155f38;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #155f38;">S</span>
+        </div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 11px; color: #c33d22;">6–8p</div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">party · cooperative</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) 150px 296px 90px 220px; gap: 14px; align-items: center; padding: 10px 14px; border-top: 1px solid #e4dabf; background: rgba(31, 143, 82, 0.1);">
+        <div style="font-weight: 700; font-size: 16.5px;">Exploding Kittens</div>
+        <div style="display: flex; align-items: center; gap: 7px;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">instant</span></div>
+        <div style="display: flex; gap: 4px; font-family: 'Courier Prime', 'Courier New', monospace; font-size: 13px; font-weight: 700;">
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #a1780a;">C</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #6c8f21;">B</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #47821f; background: rgba(195, 61, 34, 0.08); border-radius: 4px;">A</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #155f38;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #47821f;">A</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+        </div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 11px; color: #c33d22;">4–5p</div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">party · filler</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) 150px 296px 90px 220px; gap: 14px; align-items: center; padding: 10px 14px; border-top: 1px solid #e4dabf; background: rgba(31, 143, 82, 0.1);">
+        <div style="font-weight: 700; font-size: 16.5px;">Harmonies</div>
+        <div style="display: flex; align-items: center; gap: 7px;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">instant</span></div>
+        <div style="display: flex; gap: 4px; font-family: 'Courier Prime', 'Courier New', monospace; font-size: 13px; font-weight: 700;">
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #6c8f21;">B</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #155f38;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #155f38;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #47821f; background: rgba(195, 61, 34, 0.08); border-radius: 4px;">A</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+        </div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 11px; color: #c33d22;">2–3p</div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">puzzle · chill · strategy</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) 150px 296px 90px 220px; gap: 14px; align-items: center; padding: 10px 14px; border-top: 1px solid #e4dabf; background: rgba(120, 158, 40, 0.1);">
+        <div style="font-weight: 700; font-size: 16.5px;">Dominion Big Box</div>
+        <div style="display: flex; align-items: center; gap: 7px;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">~10 min</span></div>
+        <div style="display: flex; gap: 4px; font-family: 'Courier Prime', 'Courier New', monospace; font-size: 13px; font-weight: 700;">
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #47821f;">A</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #155f38;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #47821f; background: rgba(195, 61, 34, 0.08); border-radius: 4px;">A</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+        </div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 11px; color: #c33d22;">3p</div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">deckbuilder · strategy</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) 150px 296px 90px 220px; gap: 14px; align-items: center; padding: 10px 14px; border-top: 1px solid #e4dabf; background: rgba(120, 158, 40, 0.1);">
+        <div style="font-weight: 700; font-size: 16.5px;">Dorfromantik: Sakura</div>
+        <div style="display: flex; align-items: center; gap: 7px;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">~10 min</span></div>
+        <div style="display: flex; gap: 4px; font-family: 'Courier Prime', 'Courier New', monospace; font-size: 13px; font-weight: 700;">
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #155f38;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #155f38;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #47821f;">A</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #47821f; background: rgba(195, 61, 34, 0.08); border-radius: 4px;">A</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #6c8f21;">B</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #a1780a;">C</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+        </div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 11px; color: #c33d22;">1–2p</div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">cooperative · puzzle · chill</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) 150px 296px 90px 220px; gap: 14px; align-items: center; padding: 10px 14px; border-top: 1px solid #e4dabf; background: rgba(120, 158, 40, 0.1);">
+        <div style="font-weight: 700; font-size: 16.5px;">Forest Shuffle</div>
+        <div style="display: flex; align-items: center; gap: 7px;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">~10 min</span></div>
+        <div style="display: flex; gap: 4px; font-family: 'Courier Prime', 'Courier New', monospace; font-size: 13px; font-weight: 700;">
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #155f38;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #155f38;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #47821f; background: rgba(195, 61, 34, 0.08); border-radius: 4px;">A</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #6c8f21;">B</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+        </div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 11px; color: #c33d22;">2–3p</div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">strategy · engine builder</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) 150px 296px 90px 220px; gap: 14px; align-items: center; padding: 10px 14px; border-top: 1px solid #e4dabf; background: rgba(196, 158, 20, 0.12);">
+        <div style="font-weight: 700; font-size: 16.5px;">Everdell</div>
+        <div style="display: flex; align-items: center; gap: 7px;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">~30 min</span></div>
+        <div style="display: flex; gap: 4px; font-family: 'Courier Prime', 'Courier New', monospace; font-size: 13px; font-weight: 700;">
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #47821f;">A</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #155f38;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #155f38;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #47821f; background: rgba(195, 61, 34, 0.08); border-radius: 4px;">A</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+        </div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 11px; color: #c33d22;">2–3p</div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">worker placement · engine builder</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; gap: 22px; padding: 26px 44px 0;">
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; width: 92px; flex-shrink: 0; padding-top: 34px;">
+      <svg width="64" height="64" viewBox="0 0 64 64" style="transform: rotate(-4deg);"><circle cx="32" cy="32" r="29" fill="#6c8f21"></circle><text x="32" y="34" text-anchor="middle" dominant-baseline="central" font-family="'Courier Prime','Courier New',monospace" font-weight="700" font-size="27" fill="#f6efdf">B</text></svg>
+      <div style="font-weight: 900; font-size: 14px; letter-spacing: 1.5px; color: #6c8f21; text-transform: uppercase; text-align: center; line-height: 1.3;">Fine<br>at 4</div>
+      <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">14 GAMES</div>
+      <div style="flex-grow: 1; width: 3px; background: #6c8f21; border-radius: 2px; opacity: 0.5;"></div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; flex-grow: 1;">
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) 150px 296px 90px 220px; gap: 14px; align-items: center; padding: 0 14px 8px; font-family: 'Courier Prime', 'Courier New', monospace; font-size: 9px; letter-spacing: 1.5px; color: #8d8069;">
+        <span>GAME</span>
+        <span>TEACH</span>
+        <div style="display: flex; gap: 4px;"><span style="display: flex; justify-content: center; width: 28px;">1</span><span style="display: flex; justify-content: center; width: 28px;">2</span><span style="display: flex; justify-content: center; width: 28px;">3</span><span style="display: flex; justify-content: center; width: 28px; color: #c33d22; font-weight: 700;">4</span><span style="display: flex; justify-content: center; width: 28px;">5</span><span style="display: flex; justify-content: center; width: 28px;">6</span><span style="display: flex; justify-content: center; width: 28px;">7</span><span style="display: flex; justify-content: center; width: 28px;">8</span></div>
+        <span>SWEET</span>
+        <span>VIBES</span>
+      </div>
+
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) 150px 296px 90px 220px; gap: 14px; align-items: center; padding: 10px 14px; border-top: 1px solid #e4dabf; background: rgba(196, 158, 20, 0.12);">
+        <div style="font-weight: 700; font-size: 16.5px;">Targi (+ Expansion)</div>
+        <div style="display: flex; align-items: center; gap: 7px;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">~30 min</span></div>
+        <div style="display: flex; gap: 4px; font-family: 'Courier Prime', 'Courier New', monospace; font-size: 13px; font-weight: 700;">
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #155f38;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #6c8f21;">B</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #6c8f21; background: rgba(195, 61, 34, 0.08); border-radius: 4px;">B</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+        </div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 11px; color: #c33d22;">2p</div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">duel · worker placement</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) 150px 296px 90px 220px; gap: 14px; align-items: center; padding: 10px 14px; border-top: 1px solid #e4dabf; background: rgba(199, 64, 38, 0.15);">
+        <div style="font-weight: 700; font-size: 16.5px;">A Feast for Odin</div>
+        <div style="display: flex; align-items: center; gap: 7px;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">heavy rulebook</span></div>
+        <div style="display: flex; gap: 4px; font-family: 'Courier Prime', 'Courier New', monospace; font-size: 13px; font-weight: 700;">
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #47821f;">A</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #155f38;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #155f38;">S</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #6c8f21; background: rgba(195, 61, 34, 0.08); border-radius: 4px;">B</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 26px; color: #b3a68b;">·</span>
+        </div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 11px; color: #c33d22;">2–3p</div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">strategy · worker placement</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="position: absolute; left: 0; right: 0; bottom: 0; height: 110px; background: linear-gradient(180deg, rgba(246, 239, 223, 0), #f6efdf 80%); pointer-events: none;"></div>
+</div>
+</x-dc>
+<script data-dc-script data-props='{"$preview": {"width": 1440, "height": 1340}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

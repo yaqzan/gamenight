@@ -1,0 +1,274 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500;600;700;900&amp;family=Courier+Prime:wght@400;700&amp;display=swap">
+  <style>
+    body { margin: 0; background: #f6efdf; }
+    a { color: #c33d22; }
+    a:hover { color: #9e2f18; }
+  </style>
+</helmet>
+<div style="position: relative; width: 1440px; height: 1340px; overflow: hidden; background-color: #f6efdf; background-image: repeating-linear-gradient(180deg, rgba(120, 100, 60, 0) 0px, rgba(120, 100, 60, 0) 35px, rgba(120, 100, 60, 0.06) 35px, rgba(120, 100, 60, 0.06) 36px); color: #241d12; font-family: 'Libre Franklin', 'Franklin Gothic Medium', 'Segoe UI', sans-serif;">
+
+  <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 16px 44px; border-bottom: 2px solid #241d12;">
+    <div style="display: flex; align-items: center; gap: 13px;">
+      <svg width="34" height="34" viewBox="0 0 64 64"><circle cx="32" cy="32" r="26" fill="none" stroke="#241d12" stroke-width="2.5" stroke-dasharray="2 7" stroke-linecap="round"></circle><g transform="rotate(45 32 32)"><rect x="18" y="18" width="28" height="28" rx="6" fill="#c33d22"></rect><g fill="#f6efdf"><circle cx="25" cy="25" r="2.6"></circle><circle cx="39" cy="25" r="2.6"></circle><circle cx="32" cy="32" r="2.6"></circle><circle cx="25" cy="39" r="2.6"></circle><circle cx="39" cy="39" r="2.6"></circle></g></g></svg>
+      <div style="font-weight: 900; font-size: 21px; letter-spacing: 2.5px; text-transform: uppercase;">Game Night Compass</div>
+    </div>
+    <div style="display: flex; align-items: center; gap: 18px;">
+      <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 12px; color: #8d8069; letter-spacing: 1px;">96 GAMES · 78 PLAY AT 4</div>
+      <div style="display: flex; align-items: center; gap: 9px; background: #c33d22; color: #fdfaf1; padding: 11px 20px; border-radius: 4px; font-weight: 800; font-size: 13px; letter-spacing: 1.8px; text-transform: uppercase; box-shadow: 3px 3px 0 rgba(36, 29, 18, 0.22);">
+        <svg width="16" height="16" viewBox="0 0 24 24"><rect x="2.5" y="2.5" width="19" height="19" rx="4.5" fill="none" stroke="currentColor" stroke-width="2"></rect><circle cx="8" cy="8" r="1.8" fill="currentColor"></circle><circle cx="16" cy="8" r="1.8" fill="currentColor"></circle><circle cx="12" cy="12" r="1.8" fill="currentColor"></circle><circle cx="8" cy="16" r="1.8" fill="currentColor"></circle><circle cx="16" cy="16" r="1.8" fill="currentColor"></circle></svg>
+        <span>Roll the dice</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 30px; padding: 26px 44px 18px; flex-wrap: wrap;">
+    <div style="display: flex; flex-direction: column; gap: 6px;">
+      <div style="font-weight: 900; font-size: 42px; line-height: 1.02; letter-spacing: -0.5px;">Which game tonight?</div>
+      <div style="font-size: 15px; font-weight: 500; color: #5c5140; line-height: 1.5;">The whole shelf, tiered by how each game actually plays at every player count.</div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 7px;">
+      <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; letter-spacing: 2.5px; color: #8d8069;">PLAYERS AT THE TABLE</div>
+      <div style="display: flex; border: 1.5px solid #b3a68b; border-radius: 6px; overflow: hidden; background: #fdfaf1;">
+        <div style="display: flex; align-items: center; justify-content: center; min-width: 54px; height: 44px; font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #8d8069; border-right: 1px solid #e4dabf;">Any</div>
+        <div style="display: flex; align-items: center; justify-content: center; min-width: 44px; height: 44px; font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #8d8069; border-right: 1px solid #e4dabf;">1</div>
+        <div style="display: flex; align-items: center; justify-content: center; min-width: 44px; height: 44px; font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #8d8069; border-right: 1px solid #e4dabf;">2</div>
+        <div style="display: flex; align-items: center; justify-content: center; min-width: 44px; height: 44px; font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #8d8069; border-right: 1px solid #e4dabf;">3</div>
+        <div style="display: flex; align-items: center; justify-content: center; min-width: 44px; height: 44px; font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 16px; color: #fdfaf1; background: #c33d22; border-right: 1px solid #e4dabf;">4</div>
+        <div style="display: flex; align-items: center; justify-content: center; min-width: 44px; height: 44px; font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #8d8069; border-right: 1px solid #e4dabf;">5</div>
+        <div style="display: flex; align-items: center; justify-content: center; min-width: 44px; height: 44px; font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #8d8069; border-right: 1px solid #e4dabf;">6</div>
+        <div style="display: flex; align-items: center; justify-content: center; min-width: 44px; height: 44px; font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #8d8069; border-right: 1px solid #e4dabf;">7</div>
+        <div style="display: flex; align-items: center; justify-content: center; min-width: 44px; height: 44px; font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #8d8069; border-right: 1px solid #e4dabf;">8</div>
+        <div style="display: flex; align-items: center; justify-content: center; min-width: 44px; height: 44px; font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #8d8069; border-right: 1px solid #e4dabf;">9</div>
+        <div style="display: flex; align-items: center; justify-content: center; min-width: 44px; height: 44px; font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #8d8069; border-right: 1px solid #e4dabf;">10</div>
+        <div style="display: flex; align-items: center; justify-content: center; min-width: 44px; height: 44px; font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #8d8069;">12</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: center; gap: 12px; padding: 0 44px 14px; flex-wrap: wrap;">
+    <div style="display: flex; align-items: center; gap: 8px; border-bottom: 1.5px solid #b3a68b; padding: 8px 4px; width: 240px; color: #8d8069;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"></circle><line x1="15.5" y1="15.5" x2="20.5" y2="20.5"></line></svg>
+      <span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 12px;">search the shelf…</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 7px; flex-wrap: wrap; font-family: 'Courier Prime', 'Courier New', monospace; font-size: 12px; color: #5c5140;">
+      <span style="border: 1px solid #b3a68b; border-radius: 3px; padding: 6px 10px;">[ strategy ]</span>
+      <span style="border: 1px solid #b3a68b; border-radius: 3px; padding: 6px 10px;">[ party ]</span>
+      <span style="border: 1px solid #b3a68b; border-radius: 3px; padding: 6px 10px;">[ cooperative ]</span>
+      <span style="border: 1px solid #b3a68b; border-radius: 3px; padding: 6px 10px;">[ duel ]</span>
+      <span style="border: 1px solid #b3a68b; border-radius: 3px; padding: 6px 10px;">[ filler ]</span>
+      <span style="border: 1px solid #b3a68b; border-radius: 3px; padding: 6px 10px;">[ chill ]</span>
+      <span style="color: #8d8069; padding: 6px 4px;">+ 10 more</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 8px; font-family: 'Courier Prime', 'Courier New', monospace; font-size: 12px; color: #5c5140; border: 1px dashed #b3a68b; border-radius: 3px; padding: 6px 12px; margin-left: auto;">
+      <span style="color: #8d8069;">teach gate:</span>
+      <span style="display: inline-flex; gap: 2px;"><span style="display: inline-block; width: 9px; height: 12px; border-radius: 2px; background: rgba(31, 143, 82, 0.25);"></span><span style="display: inline-block; width: 9px; height: 12px; border-radius: 2px; background: rgba(120, 158, 40, 0.25);"></span><span style="display: inline-block; width: 9px; height: 12px; border-radius: 2px; background: rgba(196, 158, 20, 0.3);"></span><span style="display: inline-block; width: 9px; height: 12px; border-radius: 2px; background: rgba(207, 113, 31, 0.32);"></span><span style="display: inline-block; width: 9px; height: 12px; border-radius: 2px; background: rgba(199, 64, 38, 0.35);"></span><span style="display: inline-block; width: 9px; height: 12px; border-radius: 2px; background: rgba(178, 42, 32, 0.4);"></span></span>
+      <span style="font-weight: 700;">up to very heavy</span>
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: center; gap: 14px; padding: 9px 44px; border-top: 1px dashed #cfc3a5; border-bottom: 1px dashed #cfc3a5; background: #fbf6ea;">
+    <span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; letter-spacing: 2px; color: #8d8069;">TEACH TIME · CARD TINT</span>
+    <div style="display: flex; align-items: center; gap: 5px;"><span style="display: inline-block; width: 26px; height: 14px; border-radius: 3px; background: rgba(31, 143, 82, 0.1); border: 1px solid #e4dabf;"></span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 11px; color: #5c5140;">instant</span></div>
+    <div style="display: flex; align-items: center; gap: 5px;"><span style="display: inline-block; width: 26px; height: 14px; border-radius: 3px; background: rgba(120, 158, 40, 0.1); border: 1px solid #e4dabf;"></span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 11px; color: #5c5140;">~10 min</span></div>
+    <div style="display: flex; align-items: center; gap: 5px;"><span style="display: inline-block; width: 26px; height: 14px; border-radius: 3px; background: rgba(196, 158, 20, 0.12); border: 1px solid #e4dabf;"></span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 11px; color: #5c5140;">~30 min</span></div>
+    <div style="display: flex; align-items: center; gap: 5px;"><span style="display: inline-block; width: 26px; height: 14px; border-radius: 3px; background: rgba(207, 113, 31, 0.13); border: 1px solid #e4dabf;"></span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 11px; color: #5c5140;">experienced</span></div>
+    <div style="display: flex; align-items: center; gap: 5px;"><span style="display: inline-block; width: 26px; height: 14px; border-radius: 3px; background: rgba(199, 64, 38, 0.15); border: 1px solid #e4dabf;"></span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 11px; color: #5c5140;">heavy rulebook</span></div>
+    <div style="display: flex; align-items: center; gap: 5px;"><span style="display: inline-block; width: 26px; height: 14px; border-radius: 3px; background: rgba(178, 42, 32, 0.2); border: 1px solid #e4dabf;"></span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 11px; color: #5c5140;">very heavy</span></div>
+    <span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #8d8069; margin-left: auto;">click a card for its table notes</span>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 12px; padding: 18px 44px 0;">
+    <div style="display: flex; align-items: center; gap: 16px;">
+      <svg width="54" height="54" viewBox="0 0 64 64" style="transform: rotate(-5deg);"><circle cx="32" cy="32" r="29" fill="#155f38"></circle><text x="32" y="34" text-anchor="middle" dominant-baseline="central" font-family="'Courier Prime','Courier New',monospace" font-weight="700" font-size="27" fill="#f6efdf">S</text></svg>
+      <div style="display: flex; flex-direction: column; gap: 2px;">
+        <div style="font-weight: 900; font-size: 23px; letter-spacing: 1.5px; text-transform: uppercase;">Great at 4 players</div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 11px; letter-spacing: 1.5px; color: #155f38;">30 GAMES RATE S WITH 4 AT THE TABLE</div>
+      </div>
+      <div style="flex-grow: 1; border-bottom: 2px dashed #cfc3a5;"></div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px;">
+      <div style="display: flex; flex-direction: column; gap: 9px; background-color: #fdfaf1; background-image: linear-gradient(0deg, rgba(31, 143, 82, 0.1), rgba(31, 143, 82, 0.1)); border: 1px solid #d9cdb2; border-radius: 6px; padding: 16px 18px; box-shadow: 2px 2px 0 rgba(120, 100, 60, 0.08);">
+        <div style="display: flex; flex-direction: column; gap: 3px;">
+          <div style="font-weight: 700; font-size: 17px; line-height: 1.2;">Bomb Busters</div>
+          <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; letter-spacing: 1px; color: #5c5140;">INSTANT TEACH</div>
+        </div>
+        <div style="display: flex; gap: 5px;">
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 1px; width: 34px; padding: 4px 0; border: 1px solid #e4dabf; border-radius: 4px; background: #fdfaf1;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 9px; color: #8d8069;">2</span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #a1780a;">C</span></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 1px; width: 34px; padding: 4px 0; border: 1px solid #e4dabf; border-radius: 4px; background: #fdfaf1;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 9px; color: #8d8069;">3</span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #6c8f21;">B</span></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 1px; width: 34px; padding: 4px 0; border: 1.5px solid #c33d22; border-radius: 4px; background: #fdfaf1;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 9px; color: #c33d22;">4</span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #155f38;">S</span></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 1px; width: 34px; padding: 4px 0; border: 1px solid #e4dabf; border-radius: 4px; background: #fdfaf1;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 9px; color: #8d8069;">5</span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #155f38;">S</span></div>
+        </div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 11px; color: #c33d22;">sweet spot 4–5p</div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">[ cooperative ] [ puzzle ] [ party ]</div>
+        <div style="font-size: 13px; font-weight: 500; color: #5c5140; line-height: 1.45; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden;">Spiel des Jahres 2025 winner. Teaches itself via training missions. Really hits its stride with 4-5 players.</div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 9px; background-color: #fdfaf1; background-image: linear-gradient(0deg, rgba(31, 143, 82, 0.1), rgba(31, 143, 82, 0.1)); border: 1px solid #d9cdb2; border-radius: 6px; padding: 16px 18px; box-shadow: 2px 2px 0 rgba(120, 100, 60, 0.08);">
+        <div style="display: flex; flex-direction: column; gap: 3px;">
+          <div style="font-weight: 700; font-size: 17px; line-height: 1.2;">Just One</div>
+          <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; letter-spacing: 1px; color: #5c5140;">INSTANT TEACH</div>
+        </div>
+        <div style="display: flex; gap: 5px;">
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 1px; width: 34px; padding: 4px 0; border: 1px solid #e4dabf; border-radius: 4px; background: #fdfaf1;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 9px; color: #8d8069;">3</span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #47821f;">A</span></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 1px; width: 34px; padding: 4px 0; border: 1.5px solid #c33d22; border-radius: 4px; background: #fdfaf1;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 9px; color: #c33d22;">4</span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #155f38;">S</span></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 1px; width: 34px; padding: 4px 0; border: 1px solid #e4dabf; border-radius: 4px; background: #fdfaf1;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 9px; color: #8d8069;">5</span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #155f38;">S</span></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 1px; width: 34px; padding: 4px 0; border: 1px solid #e4dabf; border-radius: 4px; background: #fdfaf1;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 9px; color: #8d8069;">6</span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #155f38;">S</span></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 1px; width: 34px; padding: 4px 0; border: 1px solid #e4dabf; border-radius: 4px; background: #fdfaf1;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 9px; color: #8d8069;">7</span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #47821f;">A</span></div>
+        </div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 11px; color: #c33d22;">sweet spot 4–6p</div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">[ cooperative ] [ party ] [ filler ]</div>
+        <div style="font-size: 13px; font-weight: 500; color: #5c5140; line-height: 1.45; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden;">Spiel des Jahres 2019. One of the most universally loved coop party games.</div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 9px; background-color: #fdfaf1; background-image: linear-gradient(0deg, rgba(120, 158, 40, 0.1), rgba(120, 158, 40, 0.1)); border: 1px solid #d9cdb2; border-radius: 6px; padding: 16px 18px; box-shadow: 2px 2px 0 rgba(120, 100, 60, 0.08);">
+        <div style="display: flex; flex-direction: column; gap: 3px;">
+          <div style="font-weight: 700; font-size: 17px; line-height: 1.2;">Heat: Pedal to the Metal</div>
+          <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; letter-spacing: 1px; color: #5c5140;">~10 MIN TEACH</div>
+        </div>
+        <div style="display: flex; gap: 5px;">
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 1px; width: 34px; padding: 4px 0; border: 1px solid #e4dabf; border-radius: 4px; background: #fdfaf1;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 9px; color: #8d8069;">1</span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #6c8f21;">B</span></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 1px; width: 34px; padding: 4px 0; border: 1px solid #e4dabf; border-radius: 4px; background: #fdfaf1;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 9px; color: #8d8069;">2</span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #6c8f21;">B</span></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 1px; width: 34px; padding: 4px 0; border: 1px solid #e4dabf; border-radius: 4px; background: #fdfaf1;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 9px; color: #8d8069;">3</span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #47821f;">A</span></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 1px; width: 34px; padding: 4px 0; border: 1.5px solid #c33d22; border-radius: 4px; background: #fdfaf1;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 9px; color: #c33d22;">4</span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #155f38;">S</span></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 1px; width: 34px; padding: 4px 0; border: 1px solid #e4dabf; border-radius: 4px; background: #fdfaf1;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 9px; color: #8d8069;">5</span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #155f38;">S</span></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 1px; width: 34px; padding: 4px 0; border: 1px solid #e4dabf; border-radius: 4px; background: #fdfaf1;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 9px; color: #8d8069;">6</span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #155f38;">S</span></div>
+        </div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 11px; color: #c33d22;">sweet spot 4–6p</div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">[ racing ] [ strategy ] [ solo ]</div>
+        <div style="font-size: 13px; font-weight: 500; color: #5c5140; line-height: 1.45; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden;">Slipstreaming needs other cars! 4-6p is where the racing tension really hits. Solo Legends bots are decent.</div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 9px; background-color: #fdfaf1; background-image: linear-gradient(0deg, rgba(196, 158, 20, 0.12), rgba(196, 158, 20, 0.12)); border: 1px solid #d9cdb2; border-radius: 6px; padding: 16px 18px; box-shadow: 2px 2px 0 rgba(120, 100, 60, 0.08);">
+        <div style="display: flex; flex-direction: column; gap: 3px;">
+          <div style="font-weight: 700; font-size: 17px; line-height: 1.2;">Concordia</div>
+          <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; letter-spacing: 1px; color: #5c5140;">~30 MIN TEACH</div>
+        </div>
+        <div style="display: flex; gap: 5px;">
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 1px; width: 34px; padding: 4px 0; border: 1px solid #e4dabf; border-radius: 4px; background: #fdfaf1;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 9px; color: #8d8069;">2</span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #a1780a;">C</span></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 1px; width: 34px; padding: 4px 0; border: 1px solid #e4dabf; border-radius: 4px; background: #fdfaf1;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 9px; color: #8d8069;">3</span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #6c8f21;">B</span></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 1px; width: 34px; padding: 4px 0; border: 1.5px solid #c33d22; border-radius: 4px; background: #fdfaf1;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 9px; color: #c33d22;">4</span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #155f38;">S</span></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 1px; width: 34px; padding: 4px 0; border: 1px solid #e4dabf; border-radius: 4px; background: #fdfaf1;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 9px; color: #8d8069;">5</span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #155f38;">S</span></div>
+        </div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 11px; color: #c33d22;">sweet spot 4–5p</div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">[ strategy ] [ engine builder ]</div>
+        <div style="font-size: 13px; font-weight: 500; color: #5c5140; line-height: 1.45; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden;">DO NOT play at 2p. Meeple Mountain would never choose it under 4p. Brilliant and elegant at 4-5p.</div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 9px; background-color: #fdfaf1; background-image: linear-gradient(0deg, rgba(196, 158, 20, 0.12), rgba(196, 158, 20, 0.12)); border: 1px solid #d9cdb2; border-radius: 6px; padding: 16px 18px; box-shadow: 2px 2px 0 rgba(120, 100, 60, 0.08);">
+        <div style="display: flex; flex-direction: column; gap: 3px;">
+          <div style="font-weight: 700; font-size: 17px; line-height: 1.2;">Dune Imperium</div>
+          <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; letter-spacing: 1px; color: #5c5140;">~30 MIN TEACH</div>
+        </div>
+        <div style="display: flex; gap: 5px;">
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 1px; width: 34px; padding: 4px 0; border: 1px solid #e4dabf; border-radius: 4px; background: #fdfaf1;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 9px; color: #8d8069;">1</span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #47821f;">A</span></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 1px; width: 34px; padding: 4px 0; border: 1px solid #e4dabf; border-radius: 4px; background: #fdfaf1;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 9px; color: #8d8069;">2</span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #47821f;">A</span></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 1px; width: 34px; padding: 4px 0; border: 1px solid #e4dabf; border-radius: 4px; background: #fdfaf1;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 9px; color: #8d8069;">3</span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #155f38;">S</span></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 1px; width: 34px; padding: 4px 0; border: 1.5px solid #c33d22; border-radius: 4px; background: #fdfaf1;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 9px; color: #c33d22;">4</span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #155f38;">S</span></div>
+        </div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 11px; color: #c33d22;">sweet spot 3–4p</div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">[ worker placement ] [ deckbuilder ] [ strategy ]</div>
+        <div style="font-size: 13px; font-weight: 500; color: #5c5140; line-height: 1.45; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden;">Deckbuilding worker placement that elegantly combines both systems. Great solo and equally strong at 3 and 4p.</div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 9px; background-color: #fdfaf1; background-image: linear-gradient(0deg, rgba(207, 113, 31, 0.13), rgba(207, 113, 31, 0.13)); border: 1px solid #d9cdb2; border-radius: 6px; padding: 16px 18px; box-shadow: 2px 2px 0 rgba(120, 100, 60, 0.08);">
+        <div style="display: flex; flex-direction: column; gap: 3px;">
+          <div style="font-weight: 700; font-size: 17px; line-height: 1.2;">Brass: Birmingham</div>
+          <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; letter-spacing: 1px; color: #5c5140;">EXPERIENCED TABLE</div>
+        </div>
+        <div style="display: flex; gap: 5px;">
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 1px; width: 34px; padding: 4px 0; border: 1px solid #e4dabf; border-radius: 4px; background: #fdfaf1;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 9px; color: #8d8069;">2</span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #47821f;">A</span></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 1px; width: 34px; padding: 4px 0; border: 1px solid #e4dabf; border-radius: 4px; background: #fdfaf1;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 9px; color: #8d8069;">3</span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #155f38;">S</span></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 1px; width: 34px; padding: 4px 0; border: 1.5px solid #c33d22; border-radius: 4px; background: #fdfaf1;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 9px; color: #c33d22;">4</span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #155f38;">S</span></div>
+        </div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 11px; color: #c33d22;">sweet spot 3–4p</div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">[ strategy ] [ engine builder ]</div>
+        <div style="font-size: 13px; font-weight: 500; color: #5c5140; line-height: 1.45; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden;">Two eras, 6 actions — takes a play to click. Board scales by player count. Peak experience at 3-4p.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 12px; padding: 26px 44px 0;">
+    <div style="display: flex; align-items: center; gap: 16px;">
+      <svg width="54" height="54" viewBox="0 0 64 64" style="transform: rotate(4deg);"><circle cx="32" cy="32" r="29" fill="#47821f"></circle><text x="32" y="34" text-anchor="middle" dominant-baseline="central" font-family="'Courier Prime','Courier New',monospace" font-weight="700" font-size="27" fill="#f6efdf">A</text></svg>
+      <div style="display: flex; flex-direction: column; gap: 2px;">
+        <div style="font-weight: 900; font-size: 23px; letter-spacing: 1.5px; text-transform: uppercase;">Very good at 4</div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 11px; letter-spacing: 1.5px; color: #47821f;">30 GAMES RATE A WITH 4 AT THE TABLE</div>
+      </div>
+      <div style="flex-grow: 1; border-bottom: 2px dashed #cfc3a5;"></div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px;">
+
+      <div style="display: flex; flex-direction: column; gap: 9px; background-color: #fdfaf1; background-image: linear-gradient(0deg, rgba(31, 143, 82, 0.1), rgba(31, 143, 82, 0.1)); border: 1px solid #d9cdb2; border-radius: 6px; padding: 16px 18px; box-shadow: 2px 2px 0 rgba(120, 100, 60, 0.08);">
+        <div style="display: flex; flex-direction: column; gap: 3px;">
+          <div style="font-weight: 700; font-size: 17px; line-height: 1.2;">Carcassonne Big Box</div>
+          <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; letter-spacing: 1px; color: #5c5140;">INSTANT TEACH</div>
+        </div>
+        <div style="display: flex; gap: 5px;">
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 1px; width: 34px; padding: 4px 0; border: 1px solid #e4dabf; border-radius: 4px; background: #fdfaf1;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 9px; color: #8d8069;">2</span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #155f38;">S</span></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 1px; width: 34px; padding: 4px 0; border: 1px solid #e4dabf; border-radius: 4px; background: #fdfaf1;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 9px; color: #8d8069;">3</span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #155f38;">S</span></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 1px; width: 34px; padding: 4px 0; border: 1.5px solid #c33d22; border-radius: 4px; background: #fdfaf1;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 9px; color: #c33d22;">4</span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #47821f;">A</span></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 1px; width: 34px; padding: 4px 0; border: 1px solid #e4dabf; border-radius: 4px; background: #fdfaf1;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 9px; color: #8d8069;">5</span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #a1780a;">C</span></div>
+        </div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 11px; color: #c33d22;">sweet spot 2–3p</div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">[ strategy ] [ filler ] [ chill ]</div>
+        <div style="font-size: 13px; font-weight: 500; color: #5c5140; line-height: 1.45; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden;">The classic gateway. Farmers are the only tricky rule. 5p is weakest without the Count expansion.</div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 9px; background-color: #fdfaf1; background-image: linear-gradient(0deg, rgba(120, 158, 40, 0.1), rgba(120, 158, 40, 0.1)); border: 1px solid #d9cdb2; border-radius: 6px; padding: 16px 18px; box-shadow: 2px 2px 0 rgba(120, 100, 60, 0.08);">
+        <div style="display: flex; flex-direction: column; gap: 3px;">
+          <div style="font-weight: 700; font-size: 17px; line-height: 1.2;">Dominion Big Box</div>
+          <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; letter-spacing: 1px; color: #5c5140;">~10 MIN TEACH</div>
+        </div>
+        <div style="display: flex; gap: 5px;">
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 1px; width: 34px; padding: 4px 0; border: 1px solid #e4dabf; border-radius: 4px; background: #fdfaf1;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 9px; color: #8d8069;">2</span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #47821f;">A</span></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 1px; width: 34px; padding: 4px 0; border: 1px solid #e4dabf; border-radius: 4px; background: #fdfaf1;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 9px; color: #8d8069;">3</span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #155f38;">S</span></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 1px; width: 34px; padding: 4px 0; border: 1.5px solid #c33d22; border-radius: 4px; background: #fdfaf1;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 9px; color: #c33d22;">4</span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #47821f;">A</span></div>
+        </div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 11px; color: #c33d22;">sweet spot 3p</div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">[ deckbuilder ] [ strategy ]</div>
+        <div style="font-size: 13px; font-weight: 500; color: #5c5140; line-height: 1.45; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden;">The original deckbuilder. Tight at 2p; 4p adds downtime as decks shuffle. Big Box includes classic expansions.</div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 9px; background-color: #fdfaf1; background-image: linear-gradient(0deg, rgba(196, 158, 20, 0.12), rgba(196, 158, 20, 0.12)); border: 1px solid #d9cdb2; border-radius: 6px; padding: 16px 18px; box-shadow: 2px 2px 0 rgba(120, 100, 60, 0.08);">
+        <div style="display: flex; flex-direction: column; gap: 3px;">
+          <div style="font-weight: 700; font-size: 17px; line-height: 1.2;">Everdell</div>
+          <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; letter-spacing: 1px; color: #5c5140;">~30 MIN TEACH</div>
+        </div>
+        <div style="display: flex; gap: 5px;">
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 1px; width: 34px; padding: 4px 0; border: 1px solid #e4dabf; border-radius: 4px; background: #fdfaf1;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 9px; color: #8d8069;">1</span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #47821f;">A</span></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 1px; width: 34px; padding: 4px 0; border: 1px solid #e4dabf; border-radius: 4px; background: #fdfaf1;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 9px; color: #8d8069;">2</span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #155f38;">S</span></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 1px; width: 34px; padding: 4px 0; border: 1px solid #e4dabf; border-radius: 4px; background: #fdfaf1;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 9px; color: #8d8069;">3</span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #155f38;">S</span></div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 1px; width: 34px; padding: 4px 0; border: 1.5px solid #c33d22; border-radius: 4px; background: #fdfaf1;"><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 9px; color: #c33d22;">4</span><span style="font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 13px; color: #47821f;">A</span></div>
+        </div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 11px; color: #c33d22;">sweet spot 2–3p</div>
+        <div style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 10px; color: #5c5140;">[ worker placement ] [ engine builder ] [ strategy ]</div>
+        <div style="font-size: 13px; font-weight: 500; color: #5c5140; line-height: 1.45; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden;">Charming card-driven worker placement. 2-3p is the community sweet spot.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div style="position: absolute; left: 0; right: 0; bottom: 0; height: 110px; background: linear-gradient(180deg, rgba(246, 239, 223, 0), #f6efdf 80%); pointer-events: none;"></div>
+</div>
+</x-dc>
+<script data-dc-script data-props='{"$preview": {"width": 1440, "height": 1340}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>
