@@ -34,6 +34,7 @@ export const ALL_VIBES = [
   "Cooperative",
   "Solo",
   "Party",
+  "Social",
   "Social Deduction",
   "Filler",
   "Worker Placement",
@@ -45,6 +46,11 @@ export const ALL_VIBES = [
   "Puzzle",
   "Chill",
 ];
+
+/** Vibes shown on cards/rows: Social is implied by Party, so it is hidden when Party is present
+ *  (the data tag stays, so the Social filter still matches). */
+export const displayVibes = (vibes: string[]): string[] =>
+  vibes.includes("Party") ? vibes.filter((v) => v !== "Social") : vibes;
 
 export const COUNTS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12];
 

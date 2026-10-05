@@ -29,6 +29,10 @@ so. An honest error beats a made-up rating.
   stripped base game.
 - **learnExp**: only when expansions/advanced modes meaningfully raise the teach.
 - **vibes**: 1-4 from the fixed vocabulary. Never invent a vibe.
+  **Social** = talking, negotiating, persuading, debating or reading people is core to play
+  (Catan trading, Avalon, Wavelength, discussion-driven co-ops). Not mere table presence: Harmonies,
+  Flip 7, Fluxx, Ticket to Ride and take-that or silent co-ops (Sky Team, The Crew) are not Social.
+  Separate from Party. The UI hides Social on cards when Party is present (filter still matches).
 - **sweet**: honest best count(s): "2p", "3-4p", "6-10p", "Any count".
 - **note**: 1-3 punchy, opinionated sentences (≤340 chars). Name count-dependent caveats. Match
   the voice of existing notes; read a few first.

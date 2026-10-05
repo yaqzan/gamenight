@@ -24,6 +24,7 @@ VIBES = [
     "Cooperative",
     "Solo",
     "Party",
+    "Social",
     "Social Deduction",
     "Filler",
     "Worker Placement",

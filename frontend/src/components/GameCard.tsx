@@ -1,6 +1,6 @@
 import { useLayoutEffect, useRef, useState, type SyntheticEvent } from "react";
 import type { Game } from "../types";
-import { playtimeText, qualityColor, teachWash } from "../constants";
+import { displayVibes, playtimeText, qualityColor, teachWash } from "../constants";
 
 interface Props {
   game: Game;
@@ -121,7 +121,7 @@ export default function GameCard({ game, countFilter, picked }: Props) {
             );
           })}
         </div>
-        <div className="card-vibes mono">{game.vibes.map((v) => v.toLowerCase()).join(" · ")}</div>
+        <div className="card-vibes mono">{displayVibes(game.vibes).map((v) => v.toLowerCase()).join(" · ")}</div>
         <div className={`note is-open${expanded ? " is-expanded" : ""}`}>
           <div className="note-inner">
             <p

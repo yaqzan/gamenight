@@ -1,6 +1,6 @@
 import type { SyntheticEvent } from "react";
 import type { Game } from "../types";
-import { COUNTS, playtimeText, qualityColor, teachWash } from "../constants";
+import { COUNTS, displayVibes, playtimeText, qualityColor, teachWash } from "../constants";
 
 interface Props {
   game: Game;
@@ -63,7 +63,7 @@ export default function GameRow({ game, countFilter, picked, expanded, onToggle 
               );
             })}
           </div>
-          <div className="row-vibes mono">{game.vibes.map((v) => v.toLowerCase()).join(" · ")}</div>
+          <div className="row-vibes mono">{displayVibes(game.vibes).map((v) => v.toLowerCase()).join(" · ")}</div>
         </div>
         {expanded && (
           // Mounted only while open - a collapsed state that doesn't exist in the DOM
@@ -72,7 +72,7 @@ export default function GameRow({ game, countFilter, picked, expanded, onToggle 
           <div className="note is-open">
             <div className="note-inner">
               <p className="note-text">{game.note}</p>
-              <div className="note-vibes mono">{game.vibes.map((v) => v.toLowerCase()).join(" · ")}</div>
+              <div className="note-vibes mono">{displayVibes(game.vibes).map((v) => v.toLowerCase()).join(" · ")}</div>
             </div>
           </div>
         )}
