@@ -7,7 +7,9 @@ real `data/games.json` (`python -m gamenight init` copies the example in).
 """
 
 import json
+import os
 import shutil
+import subprocess
 from datetime import datetime
 
 from . import DATA_FILE, RESEARCH_DIR, SEED_FILE
@@ -36,6 +38,26 @@ def save_games(games):
     require_own_data()
     text = json.dumps(games, indent=2, ensure_ascii=False)
     DATA_FILE.write_text(text + "\n", encoding="utf-8", newline="\n")
+    run_after_write_hook()
+
+
+HOOK_ENV = "GAMENIGHT_AFTER_WRITE"
+
+
+def run_after_write_hook():
+    """Run $GAMENIGHT_AFTER_WRITE after the shelf changes, if it is set.
+
+    For anything that mirrors the shelf elsewhere (a notes app, a backup). Unset: does nothing.
+    A failing hook warns but never fails the write; the shelf is already saved.
+    """
+    cmd = os.environ.get(HOOK_ENV, "").strip()
+    if not cmd:
+        return None
+    print(f"after-write hook: {cmd}")
+    rc = subprocess.run(cmd, shell=True).returncode
+    if rc:
+        print(f"warning: after-write hook exited {rc}; games.json is saved, rerun `gamenight hooks`")
+    return rc
 
 
 def backup():

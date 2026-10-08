@@ -34,6 +34,7 @@ def main():
     p_init.add_argument("--empty", action="store_true", help="start from an empty shelf instead")
 
     sub.add_parser("validate", help="validate data/games.json against the schema")
+    sub.add_parser("hooks", help="run $GAMENIGHT_AFTER_WRITE (after a hand edit of games.json)")
 
     p_img = sub.add_parser("images", help="backfill BGG image URLs into games.json")
     p_img.add_argument("--apply", action="store_true", help="write resolved URLs (default: dry run)")
@@ -77,6 +78,11 @@ def main():
         from .research import validate_cmd
 
         validate_cmd()
+    elif args.cmd == "hooks":
+        from .data import HOOK_ENV, run_after_write_hook
+
+        if run_after_write_hook() is None:
+            print(f"{HOOK_ENV} is not set - nothing to run")
     elif args.cmd == "images":
         from .images import backfill
 

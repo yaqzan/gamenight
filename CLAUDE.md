@@ -21,6 +21,8 @@ Public repo (github.com/yaqzan/gamenight). The owner's data is gitignored local 
   `bggId`/`image`/`time` from one BGG lookup. Dry-run default.
 - `py -3.11 -m gamenight images|playtime [--apply] [--only "Name" ...]`: backfill `image`/`time`
   on EXISTING entries. Dry-run default.
+- `py -3.11 -m gamenight hooks`: run `$GAMENIGHT_AFTER_WRITE` (shell command, optional). `save_games()`
+  runs it after every write; run it by hand after a hand edit. A failing hook only warns.
 - `py -3.11 -m gamenight validate`: schema-check games.json. `init [--empty]`: create it from the example.
 - `py -3.11 -m unittest`: tests (example shelf, data fallback, vocab mirror, health)
 - `cd frontend && npm run build`: deploy (live instantly, no restart). Also `npm run dev`, `npm run icons`.

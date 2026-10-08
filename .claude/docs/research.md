@@ -16,6 +16,9 @@ alternative, not a prerequisite.
    alphabetically (casefold), keep 2-space indent + trailing newline. **Never replace an existing
    entry without the user's explicit go-ahead.**
 5. `py -3.11 -m gamenight validate`, then `cd frontend && npm run build` (live immediately).
+6. `py -3.11 -m gamenight hooks`: runs `$GAMENIGHT_AFTER_WRITE` if set (e.g. a notes-app sync
+   that gives the new game its own page). A hand edit never runs it on its own; `save_games()`
+   (the script, `images`, `playtime`) does.
 
 ## The script (same rubric, no interaction)
 

@@ -3,6 +3,7 @@
 import json
 import re
 import shutil
+import sys
 import tempfile
 import threading
 import unittest
@@ -57,6 +58,9 @@ class DataFile(unittest.TestCase):
             patcher = mock.patch.object(data, name, value)
             patcher.start()
             self.addCleanup(patcher.stop)
+        env = mock.patch.dict("os.environ", {data.HOOK_ENV: ""})
+        env.start()
+        self.addCleanup(env.stop)
 
     def test_reads_fall_back_to_example(self):
         self.assertEqual(data.data_source(), gamenight.SEED_FILE)
@@ -80,6 +84,18 @@ class DataFile(unittest.TestCase):
     def test_init_empty(self):
         data.init(empty=True)
         self.assertEqual(data.load_games(), [])
+
+    def test_save_runs_after_write_hook(self):
+        data.init(empty=True)
+        marker = self.tmp / "hook-ran"
+        script = self.tmp / "hook.py"
+        script.write_text(f"open({str(marker)!r}, 'w').write('ok')\n", encoding="utf-8")
+        with mock.patch.dict("os.environ", {data.HOOK_ENV: f'"{sys.executable}" "{script}"'}):
+            data.save_games([{"name": "x"}])
+        self.assertTrue(marker.exists())
+
+    def test_no_hook_set_is_a_no_op(self):
+        self.assertIsNone(data.run_after_write_hook())
 
     def test_save_then_backup(self):
         data.init(empty=True)
