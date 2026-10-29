@@ -54,6 +54,9 @@ ones). Pipeline and `BGG_API_TOKEN`: [`research.md`](research.md).
   error: `imageLocal`, then `image`, then hide (`handleArtError`).
 - **`bggId`**: card tile links to the game's BGG page (desktop only). On mobile the tap opens the
   note, so a corner icon carries the link (`card-bgg-link` / `ExternalLinkIcon` in `GameCard.tsx`).
+- **Sweet spot on cards**: no text line. `sweetCounts()` (`constants.ts`) parses `sweet` and the
+  matching count boxes get the accent outline (`.is-sweet`); the selected count adds a faint fill
+  on top. "Any count" outlines nothing. List view keeps its sweet column.
 - **`time`**: per-count playtime in minutes via `playtimeText()` (exact minutes for the selected
   count, else the full range). Sits in the old "teach" column in list view and the image-overlay
   corner in card view. It's playtime, not teach difficulty; don't rename it back to "teach".
@@ -65,7 +68,7 @@ ones). Pipeline and `BGG_API_TOKEN`: [`research.md`](research.md).
 - **Cards** (`GameCard.tsx`): not buttons, own `expanded` state. Clicking the body opens BGG (if
   `bggId` and viewport ≥720px). Clicking note text toggles expand, only when the note is truncated
   (`ResizeObserver` compares `scrollHeight` to `clientHeight`). `.note-text` is a shrinking flex
-  child (4.5-line cap), so `clientHeight` is the height the reader actually sees. A fixed
+  child (5.5-line cap), so `clientHeight` is the height the reader actually sees. A fixed
   `height` there once made ~30 clipped notes unclickable; keep it flexible.
 
 ## Standing items

@@ -102,3 +102,18 @@ export const playtimeText = (game: { time?: Record<string, number> }, countFilte
 export const qualityColor = (t: Tier): string => `var(--q-${t})`;
 /** Teach-time backdrop wash for a learn tier — resolved per theme in app.css. */
 export const teachWash = (t: Tier): string => `var(--wash-${t})`;
+
+/** Counts covered by a game's `sweet` text ("3-4p", "2p or 4p", "6-10p") that the game
+ * supports. "Any count" (or unparseable text) returns [] so no box is singled out. */
+export const sweetCounts = (game: { sweet: string; pc: Record<string, unknown> }): number[] => {
+  const counts = Object.keys(game.pc).map(Number);
+  const inSweet = (c: number): boolean => {
+    for (const m of game.sweet.matchAll(/(\d+)(?:\s*-\s*(\d+))?\s*p/g)) {
+      const lo = Number(m[1]);
+      const hi = Number(m[2] ?? m[1]);
+      if (c >= lo && c <= hi) return true;
+    }
+    return false;
+  };
+  return counts.filter(inSweet);
+};

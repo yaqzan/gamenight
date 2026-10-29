@@ -933,12 +933,6 @@ html[data-theme="dark"] .card-name {
   font-weight: 600;
   font-size: 20px;
 }
-.card-sweet-label {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.3px;
-  color: var(--accent);
-}
 
 .card-counts {
   display: flex;
@@ -963,8 +957,14 @@ html[data-theme="dark"] .card-name {
   border-radius: 4px;
   background: var(--pcbox-bg);
 }
+.pcbox.is-sweet {
+  border: 1.5px solid var(--accent);
+}
+/* Selected count: the same outline plus a faint fill, so it still reads when it
+   sits inside the sweet-spot run. */
 .pcbox.is-active {
   border: 1.5px solid var(--accent);
+  background: color-mix(in srgb, var(--accent) 14%, var(--pcbox-bg));
 }
 .pc-n {
   font-size: 9px;
@@ -1053,11 +1053,11 @@ html[data-theme="dark"] .card-name {
 }
 .card-body .note-text {
   /* Shrinks to whatever room the tile leaves (a 2-line name or 6 count boxes eat
-     into the 4.5-line cap), so clientHeight is the true visible height and the
+     into the 5.5-line cap), so clientHeight is the true visible height and the
      truncation check in GameCard.tsx compares against what the reader sees. */
   flex: 0 1 auto;
   min-height: 0;
-  max-height: calc(1.6em * 4.5);
+  max-height: calc(1.6em * 5.5);
   overflow: hidden;
 }
 .card-body .note-text.is-expanded,
