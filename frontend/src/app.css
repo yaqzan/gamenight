@@ -1019,7 +1019,10 @@ html[data-theme="dark"] .card-name {
 }
 .card-body .note {
   margin-top: 0;
+  flex: 1 1 auto;
   min-height: 0;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   animation: none;
 }
@@ -1030,6 +1033,10 @@ html[data-theme="dark"] .card-name {
 .card-body .note-inner {
   border-top: none;
   padding-top: 0;
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
 }
 .card-body .note.is-expanded .note-inner {
   overflow: visible;
@@ -1045,10 +1052,15 @@ html[data-theme="dark"] .card-name {
   display: none; /* desktop already shows vibes in the row grid at all times */
 }
 .card-body .note-text {
-  height: 100%;
+  /* Shrinks to whatever room the tile leaves (a 2-line name or 6 count boxes eat
+     into the 4.5-line cap), so clientHeight is the true visible height and the
+     truncation check in GameCard.tsx compares against what the reader sees. */
+  flex: 0 1 auto;
+  min-height: 0;
   max-height: calc(1.6em * 4.5);
   overflow: hidden;
 }
+.card-body .note-text.is-expanded,
 .card-body .note-text.is-truncated {
   cursor: pointer;
   -webkit-mask-image: linear-gradient(to bottom, black 0%, black 78%, transparent 100%);
@@ -1059,6 +1071,7 @@ html[data-theme="dark"] .card-name {
      downward from there, bleeding to card-body's outer edges so it reads as a
      distinct surface, and past the tile's own bottom edge like a hanging bridge. */
   position: relative;
+  flex: none;
   height: auto;
   max-height: none;
   overflow: visible;

@@ -64,7 +64,9 @@ ones). Pipeline and `BGG_API_TOKEN`: [`research.md`](research.md).
   `expanded` note (lifted state).
 - **Cards** (`GameCard.tsx`): not buttons, own `expanded` state. Clicking the body opens BGG (if
   `bggId` and viewport ≥720px). Clicking note text toggles expand, only when the note is truncated
-  (`useLayoutEffect` compares `scrollHeight` to `clientHeight`).
+  (`ResizeObserver` compares `scrollHeight` to `clientHeight`). `.note-text` is a shrinking flex
+  child (4.5-line cap), so `clientHeight` is the height the reader actually sees. A fixed
+  `height` there once made ~30 clipped notes unclickable; keep it flexible.
 
 ## Standing items
 

@@ -39,15 +39,17 @@ export default function GameCard({ game, countFilter, picked }: Props) {
   const [truncated, setTruncated] = useState(false);
   const noteRef = useRef<HTMLParagraphElement>(null);
 
-  // Only the descriptions that actually overflow the 4-line clamp get the fade +
-  // tap-to-expand treatment - a short note that already fits shouldn't look truncated.
+  // Only notes that really overflow their visible box get the fade + tap-to-expand
+  // treatment. The box shrinks with the tile's other content (see .note-text in
+  // app.css), so observe its size, not just the window.
   useLayoutEffect(() => {
     const el = noteRef.current;
     if (!el) return;
     const check = () => setTruncated(el.scrollHeight > el.clientHeight + 1);
     check();
-    window.addEventListener("resize", check);
-    return () => window.removeEventListener("resize", check);
+    const ro = new ResizeObserver(check);
+    ro.observe(el);
+    return () => ro.disconnect();
   }, [game.note]);
 
   const counts = Object.keys(game.pc)
