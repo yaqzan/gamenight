@@ -958,13 +958,11 @@ html[data-theme="dark"] .card-name {
   background: var(--pcbox-bg);
 }
 .pcbox.is-sweet {
-  border: 1.5px solid var(--accent);
+  background: color-mix(in srgb, var(--accent) 14%, var(--pcbox-bg));
 }
-/* Selected count: the same outline plus a faint fill, so it still reads when it
-   sits inside the sweet-spot run. */
+/* Selected count: outline only; it stacks with the sweet-spot fill. */
 .pcbox.is-active {
   border: 1.5px solid var(--accent);
-  background: color-mix(in srgb, var(--accent) 14%, var(--pcbox-bg));
 }
 .pc-n {
   font-size: 9px;

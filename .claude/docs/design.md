@@ -55,8 +55,8 @@ ones). Pipeline and `BGG_API_TOKEN`: [`research.md`](research.md).
 - **`bggId`**: card tile links to the game's BGG page (desktop only). On mobile the tap opens the
   note, so a corner icon carries the link (`card-bgg-link` / `ExternalLinkIcon` in `GameCard.tsx`).
 - **Sweet spot on cards**: no text line. `sweetCounts()` (`constants.ts`) parses `sweet` and the
-  matching count boxes get the accent outline (`.is-sweet`); the selected count adds a faint fill
-  on top. "Any count" outlines nothing. List view keeps its sweet column.
+  matching count boxes get a faint accent fill (`.is-sweet`); the selected count gets the accent
+  outline, stacking with the fill. "Any count" outlines nothing. List view keeps its sweet column.
 - **`time`**: per-count playtime in minutes via `playtimeText()` (exact minutes for the selected
   count, else the full range). Sits in the old "teach" column in list view and the image-overlay
   corner in card view. It's playtime, not teach difficulty; don't rename it back to "teach".
