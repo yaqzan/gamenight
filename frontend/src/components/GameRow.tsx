@@ -21,7 +21,7 @@ function handleArtError(e: SyntheticEvent<HTMLImageElement>, remote?: string) {
   }
 }
 
-/** List-view row: name | teach | per-count quality letters | sweet | vibes. */
+/** List-view row: name | teach | per-count quality letters | vibes. */
 export default function GameRow({ game, countFilter, picked, expanded, onToggle }: Props) {
   return (
     <button
@@ -46,7 +46,6 @@ export default function GameRow({ game, countFilter, picked, expanded, onToggle 
           </div>
           <div className="row-meta">
             <div className="row-teach mono">{playtimeText(game, countFilter)}</div>
-            <div className="row-sweet mono">{game.sweet}</div>
           </div>
           <div className="row-counts mono">
             {COUNTS.map((c) => {

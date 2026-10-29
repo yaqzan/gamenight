@@ -253,7 +253,6 @@ export default function App() {
               </span>
             ))}
           </span>
-          <span>sweet</span>
           <span className="row-vibes">vibes</span>
         </div>
         {games.map((g) => (

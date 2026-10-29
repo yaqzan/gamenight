@@ -1,6 +1,6 @@
 import { useLayoutEffect, useRef, useState, type SyntheticEvent } from "react";
 import type { Game } from "../types";
-import { displayVibes, playtimeText, qualityColor, sweetCounts, teachWash } from "../constants";
+import { displayVibes, playtimeText, qualityColor, teachWash } from "../constants";
 
 interface Props {
   game: Game;
@@ -33,7 +33,7 @@ function ExternalLinkIcon() {
   );
 }
 
-/** Card-view tile: name, supported-count boxes (sweet-spot counts outlined), player range + playtime, vibes, note. */
+/** Card-view tile: name, supported-count boxes, player range + playtime, vibes, note. */
 export default function GameCard({ game, countFilter, picked }: Props) {
   const [expanded, setExpanded] = useState(false);
   const [truncated, setTruncated] = useState(false);
@@ -55,7 +55,6 @@ export default function GameCard({ game, countFilter, picked }: Props) {
   const counts = Object.keys(game.pc)
     .map(Number)
     .sort((a, b) => a - b);
-  const sweet = sweetCounts(game);
   const wash = teachWash(game.learn);
   const min = counts[0];
   const max = counts[counts.length - 1];
@@ -116,8 +115,7 @@ export default function GameCard({ game, countFilter, picked }: Props) {
             return (
               <span
                 key={c}
-                className={`pcbox${active ? " is-active" : ""}${sweet.includes(c) ? " is-sweet" : ""}`}
-                title={sweet.includes(c) ? `sweet spot ${game.sweet}` : undefined}
+                className={`pcbox${active ? " is-active" : ""}`}
               >
                 <span className="pc-n mono">{c}</span>
                 <span className="pc-t mono" style={{ color: qualityColor(t) }}>

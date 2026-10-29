@@ -38,8 +38,6 @@ export default function PickBanner({ pick, rolling, onClear }: Props) {
               <div className="banner-learn mono">
                 {TIER_DESC[pick.learn]} teach
                 {pick.learnExp ? ` · exp: ${TIER_DESC[pick.learnExp]}` : ""}
-                {" · sweet spot "}
-                {pick.sweet}
               </div>
               <div className="banner-pcs">
                 {entries.map(([c, t]) => (

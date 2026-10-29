@@ -698,12 +698,12 @@ html[data-theme="dark"] .band-rule {
 
 .row-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 140px auto 80px minmax(0, 200px);
+  grid-template-columns: minmax(0, 1fr) 140px auto minmax(0, 200px);
   gap: 6px 14px;
   align-items: center;
 }
 
-/* Desktop: row-teach and row-sweet stay independent grid items in their own
+/* Desktop: row-teach stays independent grid items in their own
    columns (see grid-template-columns above) - this wrapper is invisible to layout.
    Mobile overrides it to a real flex row (see mobile block). */
 .row-meta {
@@ -814,11 +814,6 @@ html[data-theme="dark"] .row-name {
 .cell.is-col {
   background: var(--col-hl);
   border-radius: 4px;
-}
-
-.row-sweet {
-  font-size: 11px;
-  color: var(--accent);
 }
 
 .row-vibes {
@@ -957,10 +952,7 @@ html[data-theme="dark"] .card-name {
   border-radius: 4px;
   background: var(--pcbox-bg);
 }
-.pcbox.is-sweet {
-  background: color-mix(in srgb, var(--accent) 14%, var(--pcbox-bg));
-}
-/* Selected count: outline only; it stacks with the sweet-spot fill. */
+/* Selected count: outline. */
 .pcbox.is-active {
   border: 1.5px solid var(--accent);
 }
@@ -1280,8 +1272,7 @@ html[data-theme="dark"] .card-name {
     grid-area: name;
     font-size: 15px;
   }
-  /* Time + sweet spot share the top-right corner so the name has room and wraps
-     less; hug the row's right edge (justify-self on the grid item, not inside). */
+  /* Time sits in the top-right corner so the name has room and wraps less; hug the row's right edge (justify-self on the grid item, not inside). */
   .row-meta {
     display: flex;
     grid-area: meta;
@@ -1292,9 +1283,6 @@ html[data-theme="dark"] .card-name {
   }
   .row-teach {
     font-size: 9.5px;
-  }
-  .row-sweet {
-    font-size: 10px;
   }
   .row-counts {
     grid-area: counts;

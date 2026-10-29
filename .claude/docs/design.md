@@ -54,9 +54,9 @@ ones). Pipeline and `BGG_API_TOKEN`: [`research.md`](research.md).
   error: `imageLocal`, then `image`, then hide (`handleArtError`).
 - **`bggId`**: card tile links to the game's BGG page (desktop only). On mobile the tap opens the
   note, so a corner icon carries the link (`card-bgg-link` / `ExternalLinkIcon` in `GameCard.tsx`).
-- **Sweet spot on cards**: no text line. `sweetCounts()` (`constants.ts`) parses `sweet` and the
-  matching count boxes get a faint accent fill (`.is-sweet`); the selected count gets the accent
-  outline, stacking with the fill. "Any count" outlines nothing. List view keeps its sweet column.
+- **Sweet spot is not shown anywhere in the UI** (owner, 2026-10-29: a fill on the count boxes blended
+  into the background). The `sweet` field stays in `games.json`/`schema.py`; selected count = accent
+  outline on the box, that's the only highlight.
 - **`time`**: per-count playtime in minutes via `playtimeText()` (exact minutes for the selected
   count, else the full range). Sits in the old "teach" column in list view and the image-overlay
   corner in card view. It's playtime, not teach difficulty; don't rename it back to "teach".
