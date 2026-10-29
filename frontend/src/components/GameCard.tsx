@@ -41,7 +41,7 @@ export default function GameCard({ game, countFilter, picked }: Props) {
 
   // Only notes that really overflow their visible box get the fade + tap-to-expand
   // treatment. The box shrinks with the tile's other content (see .note-text in
-  // app.css), so observe its size, not just the window.
+  // app.css), so observe its size, plus font loads and window resizes.
   useLayoutEffect(() => {
     const el = noteRef.current;
     if (!el) return;
@@ -49,7 +49,18 @@ export default function GameCard({ game, countFilter, picked }: Props) {
     check();
     const ro = new ResizeObserver(check);
     ro.observe(el);
-    return () => ro.disconnect();
+    // The box keeps its size when a webfont swaps in and reflows the text, so the
+    // observer alone misses it.
+    let live = true;
+    document.fonts?.ready.then(() => live && check());
+    document.fonts?.addEventListener("loadingdone", check);
+    window.addEventListener("resize", check);
+    return () => {
+      live = false;
+      ro.disconnect();
+      document.fonts?.removeEventListener("loadingdone", check);
+      window.removeEventListener("resize", check);
+    };
   }, [game.note]);
 
   const counts = Object.keys(game.pc)
