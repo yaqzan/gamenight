@@ -1351,3 +1351,5 @@ html[data-theme="dark"] .card-name {
 .tl-tile .tl-delta { position: absolute; right: 0; bottom: 0; background: var(--accent); color: var(--bg); font-family: var(--mono); font-size: 10px; font-weight: 700; padding: 1px 4px; z-index: 1; }
 .tl-tile.is-big .tl-delta { background: var(--q-F); color: #fff; }
 .tl-moves { font-family: var(--mono); font-size: 11.5px; color: var(--ink-soft); line-height: 1.6; margin-top: 8px; }
+
+a.btn-ghost { display: inline-flex; align-items: center; text-decoration: none; }
