@@ -11,3 +11,4 @@ design/gamenight-compass-redesign.html
 data/
 ops/cloudflared-config.yml
 *.local
+frontend/public/tierlab-signal.json
