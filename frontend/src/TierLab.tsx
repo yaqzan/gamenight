@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import gamesJson from "virtual:games";
 import type { Game, Tier } from "./types";
+import PageToggle from "./components/PageToggle";
 import { COUNTS, QUALITY_LABEL, tierRank } from "./constants";
 
 // Experimental view at /#tierlab: the shelf as a classic tier list per player count, with S/A
@@ -95,12 +96,13 @@ function Pool({ title, placed, mode }: { title: string; placed: Placed[]; mode: 
   const tierOf = (p: Placed) => (mode === "current" ? p.hand : p.proposed);
   const moved = placed.filter((p) => p.hand !== p.proposed);
   const big = moved.filter((p) => delta(p) >= 2);
+  const toB = placed.filter((p) => (p.hand === "S" || p.hand === "A") && p.proposed === "B").length;
   return (
     <section className="tl-pool">
       <div className="tl-pool-head">{title}</div>
       <div className="tl-pool-sub">
         {placed.length} games ·{" "}
-        {mode === "current" ? MODE_NOTE.current : `${MODE_NOTE[mode]} · ${moved.length} move, ${big.length} by 2+ tiers`}
+        {mode === "current" ? MODE_NOTE.current : `${MODE_NOTE[mode]} · ${moved.length} move, ${big.length} by 2+ tiers · ${toB} S/A games fall to B`}
       </div>
       {SHOWN.map((t) => {
         const row = placed.filter((p) => tierOf(p) === t);
@@ -129,7 +131,7 @@ export default function TierLab() {
   const [count, setCount] = useState(3);
   const [mode, setMode] = useState<Mode>("cap");
   const [sCap, setSCap] = useState(0.15);
-  const [aCap, setACap] = useState(0.25);
+  const [aCap, setACap] = useState(0.45);
   const [signal, setSignal] = useState<Signal>({});
 
   useEffect(() => {
@@ -153,7 +155,7 @@ export default function TierLab() {
   return (
     <main className="wrap main-wrap">
       <h1 className="logo">Tier lab</h1>
-      <a className="btn-ghost mono" href="#">← back to the shelf</a>
+      <PageToggle page="tiers" />
       <div className="tl-ctl">
         <div className="picker seg-hard" role="group" aria-label="Player count">
           {COUNTS.map((c) => (

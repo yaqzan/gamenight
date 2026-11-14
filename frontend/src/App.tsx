@@ -8,6 +8,7 @@ import GameCard from "./components/GameCard";
 import GameRow from "./components/GameRow";
 import QualityBadge from "./components/QualityBadge";
 import DieIcon from "./components/DieIcon";
+import PageToggle from "./components/PageToggle";
 
 const GAMES = gamesJson as Game[];
 const SITE_HOST = import.meta.env.VITE_SITE_URL?.replace(/^https?:\/\//, "");
@@ -303,9 +304,7 @@ export default function App() {
             )}
           </div>
           <div className="hdr-actions">
-            <a className="btn-ghost mono" href="#tierlab" title="Tier list view">
-              tier list
-            </a>
+            <PageToggle page="shelf" />
             <div className="seg seg-icon" role="group" aria-label="View">
               <button
                 className={view === "cards" ? "is-on" : ""}
