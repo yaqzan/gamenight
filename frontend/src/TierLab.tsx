@@ -42,12 +42,39 @@ function propose(pool: Game[], count: number, sCap: number, aCap: number, signal
   });
 }
 
+/** Bell: force every tier to a fixed share of the pool, ranked by hand tier then signal. */
+const BELL: [Tier, number][] = [["S", 0.1], ["A", 0.2], ["B", 0.4], ["C", 0.2], ["D", 0.1]];
+function bell(pool: Game[], count: number, signal: Signal): Placed[] {
+  const key = String(count);
+  const sig = (g: Game) => signal[g.name]?.[key] ?? 0.5;
+  const ranked = [...pool].sort(
+    (a, b) => tierRank(a.pc[key]) - tierRank(b.pc[key]) || sig(b) - sig(a) || a.name.localeCompare(b.name),
+  );
+  const n = ranked.length;
+  const quota = BELL.map(([, share]) => Math.round(share * n));
+  quota[2] += n - quota.reduce((x, y) => x + y, 0);
+  const out: Placed[] = [];
+  let i = 0;
+  BELL.forEach(([t], k) => {
+    for (const g of ranked.slice(i, i + quota[k])) out.push({ game: g, hand: g.pc[key], proposed: t });
+    i += quota[k];
+  });
+  return out;
+}
+
+type Mode = "current" | "cap" | "bell";
+const MODE_NOTE: Record<Mode, string> = {
+  current: "your hand-set tiers",
+  cap: "S/A capped",
+  bell: "forced bell: S10 A20 B40 C20 D10",
+};
+
 const delta = (p: Placed) => Math.abs(tierRank(p.hand) - tierRank(p.proposed));
 
-function Tile({ p, mode }: { p: Placed; mode: "current" | "proposed" }) {
+function Tile({ p, mode }: { p: Placed; mode: Mode }) {
   const g = p.game;
   const src = g.imageLocal ? `/${g.imageLocal}` : g.image;
-  const moved = mode === "proposed" && p.hand !== p.proposed;
+  const moved = mode !== "current" && p.hand !== p.proposed;
   const big = moved && delta(p) >= 2;
   return (
     <div
@@ -64,7 +91,7 @@ function Tile({ p, mode }: { p: Placed; mode: "current" | "proposed" }) {
   );
 }
 
-function Pool({ title, placed, mode }: { title: string; placed: Placed[]; mode: "current" | "proposed" }) {
+function Pool({ title, placed, mode }: { title: string; placed: Placed[]; mode: Mode }) {
   const tierOf = (p: Placed) => (mode === "current" ? p.hand : p.proposed);
   const moved = placed.filter((p) => p.hand !== p.proposed);
   const big = moved.filter((p) => delta(p) >= 2);
@@ -73,7 +100,7 @@ function Pool({ title, placed, mode }: { title: string; placed: Placed[]; mode: 
       <div className="tl-pool-head">{title}</div>
       <div className="tl-pool-sub">
         {placed.length} games ·{" "}
-        {mode === "proposed" ? `${moved.length} move, ${big.length} by 2+ tiers` : "your hand-set tiers"}
+        {mode === "current" ? MODE_NOTE.current : `${MODE_NOTE[mode]} · ${moved.length} move, ${big.length} by 2+ tiers`}
       </div>
       {SHOWN.map((t) => {
         const row = placed.filter((p) => tierOf(p) === t);
@@ -91,7 +118,7 @@ function Pool({ title, placed, mode }: { title: string; placed: Placed[]; mode: 
           </div>
         );
       })}
-      {mode === "proposed" && moved.length > 0 && (
+      {mode !== "current" && moved.length > 0 && (
         <div className="tl-moves">{moved.map((p) => `${p.game.name} ${p.hand}→${p.proposed}`).join(" · ")}</div>
       )}
     </section>
@@ -100,7 +127,7 @@ function Pool({ title, placed, mode }: { title: string; placed: Placed[]; mode: 
 
 export default function TierLab() {
   const [count, setCount] = useState(3);
-  const [mode, setMode] = useState<"current" | "proposed">("proposed");
+  const [mode, setMode] = useState<Mode>("cap");
   const [sCap, setSCap] = useState(0.15);
   const [aCap, setACap] = useState(0.25);
   const [signal, setSignal] = useState<Signal>({});
@@ -113,14 +140,15 @@ export default function TierLab() {
       .catch(() => undefined);
   }, []);
 
-  const { main, party } = useMemo(() => {
+  const { main: mainPool, party: partyPool } = useMemo(() => {
     const at = GAMES.filter((g) => g.pc[String(count)]);
     const isParty = (g: Game) => g.vibes.includes("Party");
     return {
-      main: propose(at.filter((g) => !isParty(g)), count, sCap, aCap, signal),
-      party: propose(at.filter(isParty), count, sCap, aCap, signal),
+      main: at.filter((g) => !isParty(g)),
+      party: at.filter(isParty),
     };
-  }, [count, sCap, aCap, signal]);
+  }, [count]);
+  const place = (pool: Game[]) => (mode === "bell" ? bell(pool, count, signal) : propose(pool, count, sCap, aCap, signal));
 
   return (
     <main className="wrap main-wrap">
@@ -134,7 +162,7 @@ export default function TierLab() {
           ))}
         </div>
         <div className="seg" role="group" aria-label="Mode">
-          {(["current", "proposed"] as const).map((m) => (
+          {(["current", "cap", "bell"] as const).map((m) => (
             <button key={m} className={`mono${mode === m ? " is-on" : ""}`} onClick={() => setMode(m)}>
               {m}
             </button>
@@ -153,8 +181,8 @@ export default function TierLab() {
         Caps are shares of the games at {count}p in each pool. Order inside a tier: your hand tier, then BGG poll fit and
         rating. {SHOWN.map((t) => `${t} ${QUALITY_LABEL[t]}`).join(" · ")}. Outlined tiles moved; red tag = 2+ tiers.
       </p>
-      <Pool title={`Main shelf at ${count}p`} placed={main} mode={mode} />
-      {party.length > 0 && <Pool title={`Party bracket at ${count}p`} placed={party} mode={mode} />}
+      <Pool title={`Main shelf at ${count}p`} placed={place(mainPool)} mode={mode} />
+      {partyPool.length > 0 && <Pool title={`Party bracket at ${count}p`} placed={place(partyPool)} mode={mode} />}
     </main>
   );
 }
