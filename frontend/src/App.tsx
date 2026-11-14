@@ -303,6 +303,9 @@ export default function App() {
             )}
           </div>
           <div className="hdr-actions">
+            <a className="btn-ghost mono" href="#tierlab" title="Tier list view">
+              tier list
+            </a>
             <div className="seg seg-icon" role="group" aria-label="View">
               <button
                 className={view === "cards" ? "is-on" : ""}

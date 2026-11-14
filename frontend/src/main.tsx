@@ -9,3 +9,6 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     {window.location.hash === "#tierlab" ? <TierLab /> : <App />}
   </React.StrictMode>,
 );
+
+// The tier lab is a hash route; switching to or from it re-renders the whole page.
+window.addEventListener("hashchange", () => window.location.reload());

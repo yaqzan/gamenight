@@ -153,6 +153,7 @@ export default function TierLab() {
   return (
     <main className="wrap main-wrap">
       <h1 className="logo">Tier lab</h1>
+      <a className="btn-ghost mono" href="#">← back to the shelf</a>
       <div className="tl-ctl">
         <div className="picker seg-hard" role="group" aria-label="Player count">
           {COUNTS.map((c) => (
