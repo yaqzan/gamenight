@@ -27,7 +27,9 @@ function TierIcon() {
   );
 }
 
-export default function PageToggle({ page }: { page: "shelf" | "tiers" }) {
+export type Page = "shelf" | "tiers";
+
+export default function PageToggle({ page, onChange }: { page: Page; onChange: (p: Page) => void }) {
   return (
     <div className="seg seg-icon" role="group" aria-label="Page">
       <button
@@ -35,7 +37,7 @@ export default function PageToggle({ page }: { page: "shelf" | "tiers" }) {
         aria-pressed={page === "shelf"}
         aria-label="Shelf"
         title="Shelf (original)"
-        onClick={() => { if (page !== "shelf") window.location.hash = ""; }}
+        onClick={() => onChange("shelf")}
       >
         <ShelfIcon />
       </button>
@@ -44,7 +46,7 @@ export default function PageToggle({ page }: { page: "shelf" | "tiers" }) {
         aria-pressed={page === "tiers"}
         aria-label="Tier list"
         title="Tier list view"
-        onClick={() => { if (page !== "tiers") window.location.hash = "tierlab"; }}
+        onClick={() => onChange("tiers")}
       >
         <TierIcon />
       </button>

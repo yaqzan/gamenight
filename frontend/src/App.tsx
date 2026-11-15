@@ -8,7 +8,8 @@ import GameCard from "./components/GameCard";
 import GameRow from "./components/GameRow";
 import QualityBadge from "./components/QualityBadge";
 import DieIcon from "./components/DieIcon";
-import PageToggle from "./components/PageToggle";
+import PageToggle, { type Page } from "./components/PageToggle";
+import TierLab from "./TierLab";
 
 const GAMES = gamesJson as Game[];
 const SITE_HOST = import.meta.env.VITE_SITE_URL?.replace(/^https?:\/\//, "");
@@ -90,6 +91,19 @@ export default function App() {
   const [view, setView] = useState<View>(() => readStored("gn-view", "cards", ["list", "cards"] as const));
   const [theme, setTheme] = useState<Theme>(() => readStored("gn-theme", "dark", ["light", "dark"] as const));
   const [countFilter, setCountFilter] = useState<number | null>(null);
+  // The tier lab is a second page of the same app (#tierlab) so the header and selections carry over.
+  const [page, setPageState] = useState<Page>(() => (window.location.hash === "#tierlab" ? "tiers" : "shelf"));
+  useEffect(() => {
+    const onHash = () => setPageState(window.location.hash === "#tierlab" ? "tiers" : "shelf");
+    window.addEventListener("hashchange", onHash);
+    return () => window.removeEventListener("hashchange", onHash);
+  }, []);
+  const setPage = (p: Page) => {
+    // A tier list needs a count: "Any" becomes 3p, and that choice carries back to the shelf.
+    if (p === "tiers" && countFilter === null) setCountFilter(3);
+    window.location.hash = p === "tiers" ? "tierlab" : "";
+    setPageState(p);
+  };
   const [sortMode, setSortMode] = useState<SortMode>(() =>
     readStored("gn-sort", "random", ["random", "rank", "complexity", "name"] as const)
   );
@@ -202,6 +216,7 @@ export default function App() {
   const handleSearchChange = (value: string) => {
     setSearch(value);
     if (value) {
+      setPage("shelf");
       setCountFilter(null);
       setVibeFilter([]);
       setLearnGate("F");
@@ -304,7 +319,7 @@ export default function App() {
             )}
           </div>
           <div className="hdr-actions">
-            <PageToggle page="shelf" />
+            <PageToggle page={page} onChange={setPage} />
             <div className="seg seg-icon" role="group" aria-label="View">
               <button
                 className={view === "cards" ? "is-on" : ""}
@@ -368,6 +383,7 @@ export default function App() {
               ))}
             </div>
           </div>
+          {page === "shelf" && (
           <div className="hero-actions-group">
             <button className={`btn-roll${rolling ? " is-rolling" : ""}`} onClick={rollRandom} disabled={rollPool.length === 0}>
               <span className={rolling ? "roll-spin" : ""}>
@@ -383,10 +399,11 @@ export default function App() {
               filters{activeFilters > 0 ? ` · ${activeFilters}` : ""}
             </button>
           </div>
+          )}
         </div>
       </section>
 
-      <div className={`filters-collapse${filtersOpen ? " is-open" : ""}`}>
+      <div className={`filters-collapse${filtersOpen && page === "shelf" ? " is-open" : ""}`}>
         <div className="filters-collapse-inner">
           <Filters
             learnGate={learnGate}
@@ -399,11 +416,13 @@ export default function App() {
       </div>
 
       <div ref={bannerRef}>
-        {randomPick && <PickBanner pick={randomPick} rolling={rolling} onClear={() => setRandomPick(null)} />}
+        {page === "shelf" && randomPick && <PickBanner pick={randomPick} rolling={rolling} onClear={() => setRandomPick(null)} />}
       </div>
 
       <main className="wrap main-wrap">
-        {bands.length === 0 ? (
+        {page === "tiers" ? (
+          <TierLab count={countFilter ?? 3} />
+        ) : bands.length === 0 ? (
           <div className="empty">
             <div className="empty-die">
               <DieIcon size={44} />
@@ -461,11 +480,11 @@ export default function App() {
         researched &amp; maintained with Claude{SITE_HOST && ` · ${SITE_HOST}`}
       </footer>
 
-      <button className="fab" onClick={rollRandom} disabled={rollPool.length === 0} aria-label="Roll the dice">
+      {page === "shelf" && (<button className="fab" onClick={rollRandom} disabled={rollPool.length === 0} aria-label="Roll the dice">
         <span className={rolling ? "roll-spin" : ""}>
           <DieIcon size={24} />
         </span>
-      </button>
+      </button>)}
     </div>
   );
 }

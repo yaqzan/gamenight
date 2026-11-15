@@ -1,8 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import gamesJson from "virtual:games";
 import type { Game, Tier } from "./types";
-import PageToggle from "./components/PageToggle";
-import { COUNTS, QUALITY_LABEL, tierRank } from "./constants";
+import { QUALITY_LABEL, tierRank } from "./constants";
 
 // Experimental view at /#tierlab: the shelf as a classic tier list per player count, with S/A
 // tightened by caps (% of the games at THAT count, party games curved in their own pool).
@@ -127,15 +126,19 @@ function Pool({ title, placed, mode }: { title: string; placed: Placed[]; mode: 
   );
 }
 
-export default function TierLab() {
-  const [count, setCount] = useState(3);
-  const [mode, setMode] = useState<Mode>("cap");
-  const [sCap, setSCap] = useState(0.15);
-  const [aCap, setACap] = useState(0.45);
+// Remembered across toggling to the shelf and back (module scope outlives the component).
+const saved = { mode: "cap" as Mode, sCap: 0.15, aCap: 0.45 };
+
+export default function TierLab({ count }: { count: number }) {
+  const [mode, setMode] = useState<Mode>(saved.mode);
+  const [sCap, setSCap] = useState(saved.sCap);
+  const [aCap, setACap] = useState(saved.aCap);
+  saved.mode = mode;
+  saved.sCap = sCap;
+  saved.aCap = aCap;
   const [signal, setSignal] = useState<Signal>({});
 
   useEffect(() => {
-    document.documentElement.dataset.theme = window.localStorage.getItem("gn-theme") === "light" ? "light" : "dark";
     fetch("/tierlab-signal.json")
       .then((r) => (r.ok ? r.json() : {}))
       .then(setSignal)
@@ -153,17 +156,8 @@ export default function TierLab() {
   const place = (pool: Game[]) => (mode === "bell" ? bell(pool, count, signal) : propose(pool, count, sCap, aCap, signal));
 
   return (
-    <main className="wrap main-wrap">
-      <h1 className="logo">Tier lab</h1>
-      <PageToggle page="tiers" />
+    <>
       <div className="tl-ctl">
-        <div className="picker seg-hard" role="group" aria-label="Player count">
-          {COUNTS.map((c) => (
-            <button key={c} className={`mono${count === c ? " is-on" : ""}`} onClick={() => setCount(c)}>
-              {c}
-            </button>
-          ))}
-        </div>
         <div className="seg" role="group" aria-label="Mode">
           {(["current", "cap", "bell"] as const).map((m) => (
             <button key={m} className={`mono${mode === m ? " is-on" : ""}`} onClick={() => setMode(m)}>
@@ -186,6 +180,6 @@ export default function TierLab() {
       </p>
       <Pool title={`Main shelf at ${count}p`} placed={place(mainPool)} mode={mode} />
       {partyPool.length > 0 && <Pool title={`Party bracket at ${count}p`} placed={place(partyPool)} mode={mode} />}
-    </main>
+    </>
   );
 }
